@@ -140,8 +140,8 @@
                     <h3>Animations defined in CSS</h3>
                     <pre id="demo-cssanimation"><code class="css">
 @keyframes spin3d {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
 }
 .move-me {
     animation: spin3d 5s ease-in-out infinite;
@@ -204,6 +204,7 @@ snowFlake.animate([
                     </video>
                     <p><small><a href="https://www.cubeslam.com">cubeslam.com</a></small></p>
                 </section>
+                <!-- TODO: include parallax example? http://codepen.io/scottkellum/full/bHEcA/ -->
                 <section>
                     <h3>Best for small numbers of DOM elements</h3>
                     <p>See <a href="http://speedy-web-uis.herokuapp.com/">speedy-web-uis.herokuapp.com</a></p>
@@ -221,6 +222,7 @@ snowFlake.animate([
                     </video>
                     <p><small><a href="http://www.goodboydigital.com/runpixierun/">Run Pixie Run</a> (Pixi.js)</small></p>
                 </section>
+                <!-- TODO: Another example - maybe Three.js CanvasRenderer? -->
                 <section>
                     <h3>Best for game-like UIs when WebGL is unavailable</h3>
                 </section>
@@ -230,6 +232,7 @@ snowFlake.animate([
                 <section>
                     <h2>WebGL</h2>
                 </section>
+                <!-- TODO: An example... -->
                 <section>
                     <video width="80%" controls>
                         <source src="videos/pixijs-bunny-mark.mp4" type="video/mp4;"/>
@@ -273,6 +276,13 @@ snowFlake.animate([
                 </section>
                 <section>
                     <h3>Best for performance when available</h3>
+                </section>
+                <section>
+                    <ul>
+                        <li>Chrome <span class="tick">✓</span></li>
+                        <li>Firefox <span class="tick">✓</span></li>
+                        <li>IE 11 <span class="tick">✓</span></li>
+                    </ul>
                 </section>
                 <section>
                     <blockquote>
