@@ -183,6 +183,50 @@ body {
   95% {
     left: 0; } }
 
+@-webkit-keyframes spin3d {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+
+@keyframes spin3d {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+
+@-webkit-keyframes bounce-squish {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); }
+
+  50% {
+    -webkit-transform: scaleY(1.3) scaleX(1.3);
+    transform: scaleY(1.3) scaleX(1.3); }
+
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); } }
+
+@keyframes bounce-squish {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); }
+
+  50% {
+    -webkit-transform: scaleY(1.3) scaleX(1.3);
+    transform: scaleY(1.3) scaleX(1.3); }
+
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); } }
+
 .reveal {
   /*
   #example2 .motion {
@@ -276,5 +320,16 @@ body {
     -moz-animation: slide-out-and-in 1.5s linear infinite;
     -o-animation: slide-out-and-in 1.5s linear infinite;
     animation: slide-out-and-in 1.5s linear infinite; }
+  .reveal #example2 {
+    position: relative;
+    top: -100px; }
+    .reveal #example2 h1 {
+      -webkit-perspective: 300;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: -webkit-transform 1s;
+      -webkit-animation: bounce-squish 2s ease-in-out infinite;
+      -moz-animation: bounce-squish 2s ease-in-out infinite;
+      -o-animation: bounce-squish 2s ease-in-out infinite;
+      animation: bounce-squish 2s ease-in-out infinite; }
   .reveal h2 + small {
     margin-top: 2em; }
