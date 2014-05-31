@@ -255,6 +255,8 @@ $selectionBackgroundColor: #134674;
     margin-bottom: 0.5em;
     line-height: 1.2em;
     background: none;
+    font-style: normal;
+    width: 100%;
   }
 
   section img {
@@ -400,6 +402,7 @@ $selectionBackgroundColor: #134674;
   }
   */
 
+  p + small,
   h2 + small {
     margin-top: 2em;
   }
