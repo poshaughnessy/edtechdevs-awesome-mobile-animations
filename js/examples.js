@@ -4,7 +4,7 @@
 
     function init() {
 
-        console.log('to do', document.getElementById('example1'));
+        //console.log('to do', document.getElementById('example1'));
 
     }
 

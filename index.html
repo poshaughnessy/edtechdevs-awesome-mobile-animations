@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/futuretech.css" id="theme">
 
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -120,46 +123,106 @@
 
             <section data-background="#fd6a62">
                 <section>
-                    <h2>CSS</h2>
+                    <h2>DOM + JS</h2>
                 </section>
                 <section>
-                    <h3>Transforms</h3>
-                </section>
-                <section>
-                    <h3>Key frame animations</h3>
-                </section>
-                <section>
-                    <h3>element.animate()</h3>
+                    <p>To do: why this is bad</p>
                 </section>
             </section>
 
             <section data-background="#ff8938">
                 <section>
-                    <h2>Canvas</h2>
+                    <h2>CSS</h2>
+                </section>
+                <section>
+                    <h3>Transforms</h3>
+                    <ul>
+                        <li>translate, translate3d</li>
+                        <li>scale, scale3d</li>
+                        <li>rotate, rotate3d</li>
+                        <li>matrix, matrix3d</li>
+                        <li>skew</li>
+                        <li>perspective</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Animations defined in CSS</h3>
+                </section>
+                <section>
+                    <h3>Kicking off transforms with JS</h3>
+                    <pre><code class="javascript">
+snowFlake.style.transform = 'translate(' + snowLeft + 'px, -100%)';
+// wait a frame
+snowFlake.offsetWidth;
+snowFlake.style.transitionProperty = 'transform';
+snowFlake.style.transitionDuration = '1500ms';
+snowFlake.style.transform = 'translate(' + snowLeft + 'px, ' +
+        window.innerHeight + 'px)';
+                    </code></pre>
+                    <small><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">Example from HTML5Rocks.com</a></small>
+                </section>
+                <section>
+                    <h3>element.animate()</h3>
+                </section>
+                <section>
+                    <h4><a href="http://threejs.org/examples/css3d_molecules">CubeSlam (WebGL + non-Three.js CSS3D)</a></h4>
+                    <p>Google &amp; North Kingdom</p>
+                    <p><a href="https://www.cubeslam.com">www.cubeslam.com</a></p>
+                    <p class="video"><a href="videos/cubeslam-mobile.mp4">(Video)</a></p>
+
+                    <small><a href="https://www.cubeslam.com">CubeSlam.com</a></small>
+                </section>
+                <section>
+                    <h3>Best for small numbers of DOM elements</h3>
+                    <p>See <a href="http://speedy-web-uis.herokuapp.com/">speedy-web-uis.herokuapp.com</a></p>
                 </section>
             </section>
 
             <section data-background="#e6ba4e">
                 <section>
-                    <h2>WebGL</h2>
+                    <h2>Canvas</h2>
+                </section>
+                <section>
+                    <h3>Pixi.js</h3>
+
+                </section>
+                <section>
+                    <h3>Best for game-like UIs when WebGL is unavailable</h3>
                 </section>
             </section>
 
             <section data-background="#fe8e56">
+                <section>
+                    <h2>WebGL</h2>
+                </section>
+                <section>
+                    <h3>Best for performance when available</h3>
+                </section>
+            </section>
+
+            <section data-background="#f68dbb">
+                <section>
+                    <h2>React.js</h2>
+                </section>
+                <section>
+
+                    <div>
+                        <iframe src="//player.vimeo.com/video/79659941" width="500" height="889" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                    <small><a href="http://vimeo.com/79659941">React touch demo</a> (gallery demo from 2:10)<br/>
+                    Live demo at: <a href="http://petehunt.github.io/react-touch">petehunt.github.io/react-touch</a></small>
+                </section>
+            </section>
+
+
+            <section data-background="#01e9bb">
                 <h2>&ldquo;Great animations <br>make great apps&rdquo;</h2>
                 <small><a href="http://www.raizlabs.com/2012/09/great-animations-great-apps/">www.raizlabs.com/2012/09/great-animations-great-apps/</a></small>
 
             </section>
 
             <!--
-            <section data-background="#f68dbb">
-                <h2>Nine</h2>
-            </section>
-
-            <section data-background="#01e9bb">
-                <h2>Ten</h2>
-            </section>
-
             <section data-background="#0199e9">
                 <h2>Eleven</h2>
             </section>
