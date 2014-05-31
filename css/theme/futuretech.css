@@ -143,6 +143,58 @@ body {
 .reveal .slide-number {
   color: #ededed; }
 
+@-webkit-keyframes slide-in-left {
+  0% {
+    left: -2000px; }
+
+  10% {
+    left: 0; }
+
+  90% {
+    left: 0; }
+
+  100% {
+    left: -2000px; } }
+
+@keyframes slide-in-left {
+  0% {
+    left: -2000px; }
+
+  10% {
+    left: 0; }
+
+  90% {
+    left: 0; }
+
+  100% {
+    left: -2000px; } }
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    left: 2000px; }
+
+  10% {
+    left: 0; }
+
+  90% {
+    left: 0; }
+
+  100% {
+    left: 2000px; } }
+
+@keyframes slide-in-right {
+  0% {
+    left: 2000px; }
+
+  10% {
+    left: 0; }
+
+  90% {
+    left: 0; }
+
+  100% {
+    left: 2000px; } }
+
 @-webkit-keyframes slide-out-and-in {
   0% {
     left: 0; }
@@ -286,12 +338,39 @@ body {
     opacity: 0.25; }
   .reveal section.title h1 {
     margin-bottom: 80px; }
-  .reveal .motion-example {
+  .reveal #demo-title {
+    width: 700px;
+    height: 400px;
+    position: relative;
+    top: -50px;
+    margin: 0 auto; }
+    .reveal #demo-title h1 {
+      position: absolute; }
+      .reveal #demo-title h1.one {
+        top: 0;
+        left: -2000px;
+        -webkit-animation: slide-in-left 10s ease-in-out infinite;
+        animation: slide-in-left 10s ease-in-out infinite; }
+      .reveal #demo-title h1.two {
+        top: 1em;
+        left: 2000px;
+        -webkit-animation: slide-in-right 10s ease-in-out infinite;
+        animation: slide-in-right 10s ease-in-out infinite;
+        animation-delay: 1s;
+        -webkit-animation-delay: 1s; }
+      .reveal #demo-title h1.three {
+        top: 2em;
+        left: -2000px;
+        -webkit-animation: slide-in-left 10s ease-in-out infinite;
+        animation: slide-in-left 10s ease-in-out infinite;
+        animation-delay: 2s;
+        -webkit-animation-delay: 2s; }
+  .reveal #demo-boring {
     background: url(/img/iphone-frame-portrait.png) top left no-repeat;
     width: 360px;
     height: 710px;
     margin: 0 auto; }
-    .reveal .motion-example .container {
+    .reveal #demo-boring .container {
       border: 1px solid #666;
       background-color: #fff;
       width: 320px;
@@ -300,36 +379,31 @@ body {
       top: 115px;
       left: 20px;
       overflow: hidden; }
-      .reveal .motion-example .container p {
+      .reveal #demo-boring .container p {
         color: #333;
         font-size: 0.8em;
         padding: 1em; }
-    .reveal .motion-example .motion {
+    .reveal #demo-boring .motion {
       background-color: #4a78ab;
       height: 600px;
       width: 320px;
       position: absolute;
       left: 0;
-      top: 0; }
-      .reveal .motion-example .motion ul {
+      top: 0;
+      -webkit-animation: slide-out-and-in 1.5s linear infinite;
+      animation: slide-out-and-in 1.5s linear infinite; }
+      .reveal #demo-boring .motion ul {
         font-size: 0.8em;
         color: #ccc;
         margin-top: 1em; }
-  .reveal #example1 .motion {
-    -webkit-animation: slide-out-and-in 1.5s linear infinite;
-    -moz-animation: slide-out-and-in 1.5s linear infinite;
-    -o-animation: slide-out-and-in 1.5s linear infinite;
-    animation: slide-out-and-in 1.5s linear infinite; }
-  .reveal #example2 {
+  .reveal #demo-question {
     position: relative;
     top: -100px; }
-    .reveal #example2 h1 {
+    .reveal #demo-question h1 {
       -webkit-perspective: 300;
       -webkit-transform-style: preserve-3d;
       -webkit-transition: -webkit-transform 1s;
       -webkit-animation: bounce-squish 2s ease-in-out infinite;
-      -moz-animation: bounce-squish 2s ease-in-out infinite;
-      -o-animation: bounce-squish 2s ease-in-out infinite;
       animation: bounce-squish 2s ease-in-out infinite; }
   .reveal h2 + small {
     margin-top: 2em; }
