@@ -121,15 +121,6 @@
                 </div>
             </section>
 
-            <section data-background="#fd6a62">
-                <section>
-                    <h2>DOM + JS</h2>
-                </section>
-                <section>
-                    <p>To do: why this is bad</p>
-                </section>
-            </section>
-
             <section data-background="#ff8938">
                 <section>
                     <h2>CSS</h2>
@@ -147,18 +138,21 @@
                 </section>
                 <section>
                     <h3>Animations defined in CSS</h3>
-                    <pre><code class="css">
+                    <pre id="demo-cssanimation"><code class="css">
 @keyframes spin3d {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
 }
-
 .move-me {
     animation: spin3d 5s ease-in-out infinite;
+}
+
+.another-one {
+    transition-property: transform;
+    transition-duration: 2s;
+}
+.another-one:hover {
+    transform: rotateX(45deg) scale(1.2)
 }
                     </code></pre>
                     <small>NB. Vendor prefixes omitted for simplicity</small>
@@ -188,10 +182,18 @@ snowFlake.animate([
                 </section>
                 <section>
                     <video width="80%" controls>
+                        <!-- TODO: Maybe replace with periodic table one -->
+                        <source src="videos/threejs-css3d-molecules.mp4"/>
+                        <!--<source src="videosthreejs-css3d-molecules.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://threejs.org/examples/css3d_molecules">threejs.org/examples/css3d_molecules</a></small></p>
+                </section>
+                <section>
+                    <video width="80%" controls>
                         <source src="videos/cubeslam-mobile.mp4" type="video/mp4;"/>
                         <!--<source src="videos/cubeslam-mobile.webm" type="video/webm;"/>-->
                     </video>
-                    <p><small><a href="https://www.cubeslam.com">CubeSlam.com</a></small></p>
+                    <p><small><a href="https://www.cubeslam.com">cubeslam.com</a></small></p>
                 </section>
                 <section>
                     <h3>Best for small numbers of DOM elements</h3>

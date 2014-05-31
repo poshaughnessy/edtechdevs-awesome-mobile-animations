@@ -375,6 +375,14 @@ body {
   margin-bottom: 80px; }
 .reveal img.bunny {
   margin-top: 1em; }
+.reveal #demo-cssanimation {
+  transition-property: transform;
+  -webkit-transition-property: transform;
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s; }
+.reveal #demo-cssanimation:hover {
+  transform: rotateX(45deg) scale(1.2);
+  -webkit-transform: rotateX(45deg) scale(1.2); }
 .reveal #demo-title {
   width: 700px;
   height: 400px;

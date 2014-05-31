@@ -330,6 +330,17 @@ $selectionBackgroundColor: #134674;
 
   // Embedded examples
 
+  #demo-cssanimation {
+    transition-property: transform;
+    -webkit-transition-property: transform;
+    transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+  }
+  #demo-cssanimation:hover {
+    transform: rotateX(45deg) scale(1.2);
+    -webkit-transform: rotateX(45deg) scale(1.2);
+  }
+
   #demo-title {
 
     width: 700px;
