@@ -50,8 +50,8 @@ $selectionBackgroundColor: #134674;
 
 // Future Tech modifications -------------------
 
-// Slide in left
-@-webkit-keyframes slide-in-left {
+// Slide in left 1
+@-webkit-keyframes slide-in-left1 {
   0% {
     left: -2000px;
   }
@@ -65,11 +65,41 @@ $selectionBackgroundColor: #134674;
     left: -2000px;
   }
 }
-@keyframes slide-in-left {
+@keyframes slide-in-left1 {
   0% {
     left: -2000px;
   }
   10% {
+    left: 0;
+  }
+  90% {
+    left: 0;
+  }
+  100% {
+    left: -2000px;
+  }
+}
+
+// Slide in left 2
+@-webkit-keyframes slide-in-left2 {
+  0% {
+    left: -2000px;
+  }
+  20% {
+    left: 0;
+  }
+  90% {
+    left: 0;
+  }
+  100% {
+    left: -2000px;
+  }
+}
+@keyframes slide-in-left2 {
+  0% {
+    left: -2000px;
+  }
+  20% {
     left: 0;
   }
   90% {
@@ -85,7 +115,7 @@ $selectionBackgroundColor: #134674;
   0% {
     left: 2000px;
   }
-  10% {
+  15% {
     left: 0;
   }
   90% {
@@ -99,7 +129,7 @@ $selectionBackgroundColor: #134674;
   0% {
     left: 2000px;
   }
-  10% {
+  15% {
     left: 0;
   }
   90% {
@@ -281,8 +311,8 @@ $selectionBackgroundColor: #134674;
       &.one {
         top: 0;
         left: -2000px;
-        -webkit-animation: slide-in-left 10s ease-in-out infinite;
-        animation:         slide-in-left 10s ease-in-out infinite;
+        -webkit-animation: slide-in-left1 10s ease-in-out infinite;
+        animation:         slide-in-left1 10s ease-in-out infinite;
       }
 
       &.two {
@@ -290,17 +320,13 @@ $selectionBackgroundColor: #134674;
         left: 2000px;
         -webkit-animation: slide-in-right 10s ease-in-out infinite;
         animation:         slide-in-right 10s ease-in-out infinite;
-        animation-delay: 1s;
-        -webkit-animation-delay: 1s;
       }
 
       &.three {
         top: 2em;
         left: -2000px;
-        -webkit-animation: slide-in-left 10s ease-in-out infinite;
-        animation:         slide-in-left 10s ease-in-out infinite;
-        animation-delay: 2s;
-        -webkit-animation-delay: 2s;
+        -webkit-animation: slide-in-left2 10s ease-in-out infinite;
+        animation:         slide-in-left2 10s ease-in-out infinite;
       }
     }
 
