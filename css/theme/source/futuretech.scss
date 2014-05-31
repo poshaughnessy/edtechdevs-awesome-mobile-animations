@@ -254,6 +254,20 @@ $selectionBackgroundColor: #134674;
     margin-bottom: 0.5em;
   }
 
+  pre {
+    width: 100%;
+    code {
+      padding: 5px 10px;
+    }
+  }
+
+  p + small,
+  h2 + small,
+  h3 + small,
+  h3 + p {
+    margin-top: 2em;
+  }
+
   blockquote {
     box-shadow: none;
     font-size: 1.3em;
@@ -296,10 +310,22 @@ $selectionBackgroundColor: #134674;
     opacity: 0.25;
   }
 
+  .notes {
+    margin-top: 1em;
+  }
+
+  .strike-through {
+    text-decoration:line-through
+  }
+
   // Slide-specific styles  ----------------------
 
   section.title h1 {
     margin-bottom: 80px;
+  }
+
+  img.bunny {
+    margin-top: 1em;
   }
 
   // Embedded examples
@@ -397,23 +423,6 @@ $selectionBackgroundColor: #134674;
       animation:         bounce-squish 4s ease-in-out infinite;
     }
   }
-
-  /*
-  #example2 .motion {
-    -webkit-animation: slide-out-and-in 1.5s ease-in-out infinite;
-    -moz-animation:    slide-out-and-in 1.5s ease-in-out infinite;
-    -o-animation:      slide-out-and-in 1.5s ease-in-out infinite;
-    animation:         slide-out-and-in 1.5s ease-in-out infinite;
-  }
-  */
-
-  p + small,
-  h2 + small,
-  h3 + small,
-  h3 + p {
-    margin-top: 2em;
-  }
-
 
 }
 

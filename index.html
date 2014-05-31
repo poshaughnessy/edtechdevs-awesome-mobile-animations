@@ -147,6 +147,21 @@
                 </section>
                 <section>
                     <h3>Animations defined in CSS</h3>
+                    <pre><code class="css">
+@keyframes spin3d {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.move-me {
+    animation: spin3d 5s ease-in-out infinite;
+}
+                    </code></pre>
+                    <small>NB. Vendor prefixes omitted for simplicity</small>
                 </section>
                 <section>
                     <h3>Kicking off transforms with JS</h3>
@@ -163,14 +178,20 @@ snowFlake.style.transform = 'translate(' + snowLeft + 'px, ' +
                 </section>
                 <section>
                     <h3>element.animate()</h3>
+                    <pre><code class="javascript">
+snowFlake.animate([
+    {transform: 'translate(' + snowLeft + 'px, -100%)'},
+    {transform: 'translate(' + snowLeft + 'px, ' + window.innerHeight + 'px)'}
+], 1500);
+                    </code></pre>
+                    <small><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">Example from HTML5Rocks.com</a></small>
                 </section>
                 <section>
-                    <h4><a href="http://threejs.org/examples/css3d_molecules">CubeSlam (WebGL + non-Three.js CSS3D)</a></h4>
-                    <p>Google &amp; North Kingdom</p>
-                    <p><a href="https://www.cubeslam.com">www.cubeslam.com</a></p>
-                    <p class="video"><a href="videos/cubeslam-mobile.mp4">(Video)</a></p>
-
-                    <small><a href="https://www.cubeslam.com">CubeSlam.com</a></small>
+                    <video width="80%" controls>
+                        <source src="videos/cubeslam-mobile.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/cubeslam-mobile.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="https://www.cubeslam.com">CubeSlam.com</a></small></p>
                 </section>
                 <section>
                     <h3>Best for small numbers of DOM elements</h3>
@@ -183,8 +204,11 @@ snowFlake.style.transform = 'translate(' + snowLeft + 'px, ' +
                     <h2>Canvas</h2>
                 </section>
                 <section>
-                    <h3>Pixi.js</h3>
-
+                    <video width="80%" controls>
+                        <source src="videos/run-pixie-run.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/run-pixie-run.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://www.goodboydigital.com/runpixierun/">Run Pixie Run</a> (Pixi.js)</small></p>
                 </section>
                 <section>
                     <h3>Best for game-like UIs when WebGL is unavailable</h3>
@@ -194,6 +218,41 @@ snowFlake.style.transform = 'translate(' + snowLeft + 'px, ' +
             <section data-background="#fe8e56">
                 <section>
                     <h2>WebGL</h2>
+                </section>
+                <section>
+                    <h3>WebGL <em>disabled</em></h3>
+                    <div>
+                        <ul class="smaller">
+                            <li>200 bunnies: 30 FPS</li>
+                            <li>1000 bunnies: 12 FPS</li>
+                            <li>2000 bunnies: 7 FPS</li>
+                        </ul>
+                        <img class="bunny" src="img/bunny-sad.png"/>
+                        <div class="notes">
+                            <small>
+                                Chrome Beta for Android on a Nexus 7 tablet.<br/>
+                                NB. Results vary a lot by device.<br/>
+                                Try it yourself @ <a href="http://bit.ly/bunnymark">bit.ly/bunnymark</a>
+                            </small>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>WebGL <em>enabled</em></h3>
+                    <div>
+                        <ul class="smaller">
+                            <li>200 bunnies: <span class="strike-through">30</span> <span class="highlight">59</span> FPS</li>
+                            <li>1000 bunnies <span class="strike-through">12</span> <span class="highlight">45</span> FPS</li>
+                            <li>2000 bunnies: <span class="strike-through">7</span> <span class="highlight">30</span> FPS</li>
+                        </ul>
+                        <img class="bunny" src="img/bunny-happy.png"/>
+                        <div class="notes">
+                            <small>
+                                Chrome Beta for Android on a Nexus 7 tablet<br/>
+                                Try it yourself @ <a href="http://bit.ly/bunnymark">bit.ly/bunnymark</a>
+                            </small>
+                        </div>
+                    </div>
                 </section>
                 <section>
                     <h3>Best for performance when available</h3>

@@ -8,9 +8,11 @@ app.get('/', function(request, response) {
 
 app.configure(function() {
     app.use('/css', express.static(__dirname + '/css'));
+    app.use('/flash', express.static(__dirname + '/flash'));
     app.use('/img', express.static(__dirname + '/img'));
     app.use('/js', express.static(__dirname + '/js'));
     app.use('/lib', express.static(__dirname + '/lib'));
+    app.use('/videos', express.static(__dirname + '/videos'));
     app.use('/favicon.ico', express.static(__dirname + '/favicon.ico'));
 });
 
