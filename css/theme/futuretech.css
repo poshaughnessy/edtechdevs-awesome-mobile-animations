@@ -387,6 +387,8 @@ body {
   font-size: 2em; }
   .reveal .tech-contents li {
     line-height: 1.5em; }
+.reveal .further-reading {
+  font-size: 0.9em; }
 .reveal #demo-cssanimation {
   transition-property: transform;
   -webkit-transition-property: transform;
