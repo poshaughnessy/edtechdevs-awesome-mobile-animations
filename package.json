@@ -1,21 +1,13 @@
 {
-  "name": "reveal.js",
-  "version": "2.6.1",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
+  "name": "awesome-mobile-animations",
+  "version": "1.0",
+  "description": "Awesome Mobile Animations presentation",
   "scripts": {
     "test": "grunt test",
     "start": ""
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "name": "Peter O'Shaughnessy"
   },
   "engines": {
     "node": "~0.8.0",
@@ -40,8 +32,7 @@
   },
   "licenses": [
     {
-      "type": "MIT",
-      "url": "https://github.com/hakimel/reveal.js/blob/master/LICENSE"
+      "type": "MIT"
     }
   ]
 }
