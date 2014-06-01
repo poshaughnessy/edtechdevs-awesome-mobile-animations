@@ -343,7 +343,7 @@ $selectionBackgroundColor: #134674;
 
   #demo-title {
 
-    width: 700px;
+    width: 680px;
     height: 400px;
     position: relative;
     top: -50px;
@@ -423,6 +423,12 @@ $selectionBackgroundColor: #134674;
 
   #demo-question {
 
+    width: 800px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+
+    /*
     position: relative;
     top: -100px;
 
@@ -432,6 +438,27 @@ $selectionBackgroundColor: #134674;
       -webkit-transition: -webkit-transform 1s;
       -webkit-animation: bounce-squish 3s ease-in-out infinite;
       animation:         bounce-squish 3s ease-in-out infinite;
+    }
+    */
+
+    h1 {
+      position: absolute;
+      white-space: nowrap;
+
+      &.one {
+        top: 0;
+        left: -2000px;
+        -webkit-animation: slide-in-left1 10s ease-in-out infinite;
+        animation:         slide-in-left1 10s ease-in-out infinite;
+      }
+
+      &.two {
+        top: 1.5em;
+        left: 2000px;
+        -webkit-animation: slide-in-right 10s ease-in-out infinite;
+        animation:         slide-in-right 10s ease-in-out infinite;
+      }
+
     }
   }
 
