@@ -126,9 +126,11 @@
                 <h3 class="fragment">What about Mobile Web?</h3>
             </section>
 
+            <!--
             <section data-background="#0ac2d2">
                 <h2>Examples</h2>
             </section>
+            -->
 
             <section data-background="#7bb7fa">
                 <section>
@@ -139,15 +141,8 @@
                         <iframe src="//player.vimeo.com/video/79659941" width="500" height="889" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
-                    <small><a href="http://vimeo.com/79659941">React touch demo</a> (meny @ 0:43, gallery @ 2:10)<br/>
+                    <small><a href="http://vimeo.com/79659941">React touch demo</a> (menu @ 0:43, gallery @ 2:10)<br/>
                         Live demo at: <a href="http://petehunt.github.io/react-touch">petehunt.github.io/react-touch</a></small>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/threejs-css3d-periodic.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/threejs-css3d-periodic.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small><a href="http://bit.ly/css3d-per">bit.ly/css3d-per</a></small></p>
                 </section>
                 <section>
                     <video width="80%" controls>
@@ -165,10 +160,21 @@
                 </section>
                 <section>
                     <video width="80%" controls>
+                        <source src="videos/threejs-css3d-periodic.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/threejs-css3d-periodic.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://bit.ly/css3d-per">bit.ly/css3d-per</a> (Three.js CSS3DRenderer)</small></p>
+                </section>
+                <section>
+                    <video width="80%" controls>
                         <source src="videos/threejs-css3d-100.mp4" type="video/mp4;"/>
                         <source src="videos/threejs-css3d-100.webm" type="video/webm;"/>
                     </video>
                     <p><small>ZamBlocks experiment (Three.js CSS3DRenderer)</small></p>
+                </section>
+                <section>
+                    <h3>Best for (small numbers of) DOM elements</h3>
+                    <p><small>(See <a href="http://speedy-web-uis.herokuapp.com/">speedy-web-uis.herokuapp.com</a>)</small></p>
                 </section>
             </section>
 
@@ -185,12 +191,6 @@
                 </section>
                 <section>
                     <video width="80%" controls>
-                        <source src="videos/pixijs-bunny-mark-canvas.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/pixijs-bunny-mark-canvas.webm" type="video/webm;"/>-->
-                    </video>
-                </section>
-                <section>
-                    <video width="80%" controls>
                         <source src="videos/knoggins.mp4" type="video/mp4;"/>
                         <!--<source src="videos/knoggins.webm" type="video/webm;"/>-->
                     </video>
@@ -202,6 +202,9 @@
                         <source src="videos/threejs-canvas-text-optimised.webm" type="video/webm;"/>
                     </video>
                     <p><small>ZamBlocks experiment (Three.js CanvasRenderer)</small></p>
+                </section>
+                <section>
+                    <h3>Best for game-like UIs when WebGL is unavailable</h3>
                 </section>
             </section>
 
@@ -232,8 +235,8 @@
                 <section>
                     <h3><em>With</em> WebGL</h3>
                     <video width="70%" controls>
-                        <source src="videos/pixijs-bunny-mark.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/pixijs-bunny-mark.webm" type="video/webm;"/>-->
+                        <source src="videos/pixijs-bunny-mark-webgl.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/pixijs-bunny-mark-webgl.webm" type="video/webm;"/>-->
                     </video>
                     <p>
                         <small>
@@ -242,8 +245,23 @@
                         </small>
                     </p>
                 </section>
+                <section>
+                    <h3>Best for performance when available</h3>
+                    <ul>
+                        <li>Chrome for Android <span class="tick">✓</span></li>
+                        <li>Firefox for Android <span class="tick">✓</span></li>
+                        <li>Opera Mobile <span class="tick">✓</span></li>
+                        <li>iOS Safari <span class="cross">✗</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <blockquote>
+                        <p>&ldquo;The final domino is teetering, about to fall. WebGL on Safari is coming&rdquo;</p>
+                    </blockquote>
+                    <p><small><a href="http://blog.playcanvas.com/apple-embraces-webgl/">blog.playcanvas.com/apple-embraces-webgl</a></small></p>
+                </section>
             </section>
-
+<!--
             <section data-background="#60c7f7">
                 <h2>How?</h2>
             </section>
@@ -251,9 +269,12 @@
             <section data-background="#0ac2d2">
                 <h2>CSS</h2>
                 <ul>
+                -->
                     <!-- TODO useful links - places to start -->
-                    <li>Three.js CSS3DRenderer</li>
+                <!--
+                    <li><a href="http://michaelobriena.github.io/blog/2013/09/28/understanding-the-threejs-css3drenderer/">Three.js CSS3DRenderer</a></li>
                 </ul>
+                -->
                 <!-- TODO: turn each of these into an example? -->
                 <!--
                     <h3>Transforms</h3>
@@ -267,12 +288,15 @@
                     </ul>
                 </section>
                 -->
+<!--
             </section>
 
             <section data-background="#7bb7fa">
                 <h2>Canvas</h2>
                 <ul>
+                -->
                     <!-- TODO useful links - places to start -->
+                <!--
                     <li>Three.js CanvasRenderer</li>
                 </ul>
             </section>
@@ -280,10 +304,13 @@
             <section data-background="#60d7a9">
                 <h2>WebGL</h2>
                 <ul>
+                -->
                     <!-- TODO useful links - places to start -->
+                <!--
                     <li></li>
                 </ul>
             </section>
+-->
 
             <section data-background="#54e3d0">
                 <section>
@@ -338,6 +365,7 @@ snowFlake.animate([
                 </section>
             </section>
 
+            <!--
             <section data-background="#60c7f7">
                 <h2>Which?</h2>
             </section>
@@ -371,6 +399,7 @@ snowFlake.animate([
                     <p><small><a href="http://blog.playcanvas.com/apple-embraces-webgl/">blog.playcanvas.com/apple-embraces-webgl</a></small></p>
                 </section>
             </section>
+            -->
 
             <section data-background="#54e3d0">
                 <section>
@@ -421,6 +450,19 @@ snowFlake.animate([
                     <h2 class="three">Thoughts?</h2>
                 </div>
                 <h4>@poshaughnessy</h4>
+                <h4><a href="http://todo-link">http://todo-link</a></h4>
+            </section>
+
+            <section data-background="#0ac2d2">
+                <h2>Further reading</h2>
+                <ul>
+                    <!--<li><a href="http://www.html5rocks.com/en/tutorials/speed/animations/">"Leaner, Meaner, Faster Animations with requestAnimationFrame"</a> (HTML5Rocks)</li>-->
+                    <li><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">High Performance Animations</a> (HTML5Rocks)</li>
+                    <li><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">Jank Busting for Better Rendering Performance</a> (HTML5Rocks)</li>
+                    <li><a href="http://third-dimension-webgl-threejs.herokuapp.com">"The 3rd Dimension with WebGL &amp; Three.js"</a></li>
+                    <li><a href="http://www.peteroshaughnessy.com/post/60868538533/attempting-fast-3d-graphics-for-mobile-web-without">"Attempting fast 3D graphics for mobile web, without WebGL"</a> (Three.js, Pixi.js)</li>
+                    <!--<li><a href="http://michaelobriena.github.io/blog/2013/09/28/understanding-the-threejs-css3drenderer/">"Understanding the Three.js CSS3DRenderer"</a></li>-->
+                </ul>
             </section>
 
         </div>
