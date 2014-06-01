@@ -443,8 +443,8 @@ $selectionBackgroundColor: #134674;
 
   #demo-question {
 
-    width: 800px;
-    height: 400px;
+    width: 600px;
+    height: 420px;
     position: relative;
     margin: 0 auto;
 
@@ -461,7 +461,7 @@ $selectionBackgroundColor: #134674;
     }
     */
 
-    h1 {
+    h1, h2 {
       position: absolute;
       white-space: nowrap;
 
@@ -473,10 +473,17 @@ $selectionBackgroundColor: #134674;
       }
 
       &.two {
-        top: 1.5em;
+        top: 2.5em;
         left: 2000px;
         -webkit-animation: slide-in-right 10s ease-in-out infinite;
         animation:         slide-in-right 10s ease-in-out infinite;
+      }
+
+      &.three {
+        top: 4em;
+        left: -2000px;
+        -webkit-animation: slide-in-left2 10s ease-in-out infinite;
+        animation:         slide-in-left2 10s ease-in-out infinite;
       }
 
     }
