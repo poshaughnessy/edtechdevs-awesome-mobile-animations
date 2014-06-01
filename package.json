@@ -1,6 +1,6 @@
 {
   "name": "awesome-mobile-animations",
-  "version": "1.0",
+  "version": "0.1.0",
   "description": "Awesome Mobile Animations presentation",
   "scripts": {
     "test": "grunt test",
