@@ -318,6 +318,19 @@ $selectionBackgroundColor: #134674;
     text-decoration:line-through
   }
 
+  .tick,
+  .cross {
+    text-shadow: 1px 1px 1px #666, -1px -1px 1px #666, 0px 1px 1px #666, 1px 0px 1px #666;
+    padding-left: 10px;
+  }
+  .tick {
+    color: #94d682;
+
+  }
+  .cross {
+    color: #fb611e;
+  }
+
   // Slide-specific styles  ----------------------
 
   section.title h1 {
@@ -326,6 +339,13 @@ $selectionBackgroundColor: #134674;
 
   img.bunny {
     margin-top: 1em;
+  }
+
+  .tech-contents {
+    font-size: 2em;
+    li {
+      line-height: 1.5em;
+    }
   }
 
   // Embedded examples
@@ -376,7 +396,7 @@ $selectionBackgroundColor: #134674;
 
   }
 
-  #demo-boring {
+  .motion-example {
 
     background: url(/img/iphone-frame-portrait.png) top left no-repeat;
     width: 360px;

@@ -114,29 +114,100 @@
             </section>
 
             <section data-background="#54e3d0">
-                <div data-build>
-                    <h3>Mobile apps are becoming more fluid</h3>
-                    <h3 class="fragment">Those examples were all native iOS</h3>
-                    <h3 class="fragment">What about the Web?</h3>
-                </div>
+                <h3>Mobile apps are becoming more fluid</h3>
+                <h3 class="fragment">Those examples were all native iOS</h3>
+                <h3 class="fragment">What about the Mobile Web?</h3>
             </section>
 
-            <section data-background="#60c7f7">
-                <div data-build>
-                    <ul>
-                        <li>CSS</li>
-                        <li>Canvas</li>
-                        <li>WebGL</li>
-                    </ul>
-                </div>
+            <section data-background="">
+                <h2>Examples</h2>
             </section>
+
+            <section data-background="">
+                <section>
+                    <h2>CSS3D</h2>
+                </section>
+                <section>
+                    <div>
+                        <iframe src="//player.vimeo.com/video/79659941" width="500" height="889" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                    <small><a href="http://vimeo.com/79659941">React touch demo</a> (meny @ 0:43, gallery @ 2:10)<br/>
+                        Live demo at: <a href="http://petehunt.github.io/react-touch">petehunt.github.io/react-touch</a></small>
+                </section>
+                <section>
+                    <video width="80%" controls>
+                        <!-- TODO: Replace with periodic table one on iPhone 5S -->
+                        <source src="videos/threejs-css3d-molecules.mp4"/>
+                        <!--<source src="videosthreejs-css3d-molecules.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://threejs.org/examples/css3d_molecules">threejs.org/examples/css3d_molecules</a></small></p>
+                </section>
+                <section>
+                    <video width="80%" controls>
+                        <!-- TODO: Maybe replace with same on iPhone 5S -->
+                        <source src="videos/cubeslam-mobile.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/cubeslam-mobile.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="https://www.cubeslam.com">cubeslam.com</a></small></p>
+                </section>
+                <!-- TODO: include parallax example? http://codepen.io/scottkellum/full/bHEcA/ -->
+            </section>
+
+            <section data-background="">
+                <section>
+                    <h2>Canvas</h2>
+                </section>
+                <section>
+                    <!-- TODO: are we sure this is non-WebGL? Record on iOS just in case -->
+                    <video width="80%" controls>
+                        <source src="videos/run-pixie-run.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/run-pixie-run.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://www.goodboydigital.com/runpixierun/">Run Pixie Run</a> (Pixi.js)</small></p>
+                </section>
+                <!-- TODO: Another example - maybe Three.js CanvasRenderer? -->
+            </section>
+
+            <section data-background="">
+                <section>
+                    <h2>WebGL</h2>
+                </section>
+                <!-- TODO: An example... -->
+                <section>
+                    <!-- TODO: are we sure this is WebGL? Check just in case -->
+                    <video width="80%" controls>
+                        <source src="videos/pixijs-bunny-mark.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/pixijs-bunny-mark.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://bit.ly/bunnymark">bit.ly/bunnymark</a></small></p>
+                </section>
+            </section>
+
+            <section data-background="">
+                <h2>How?</h2>
+            </section>
+
+            <!--
+            <section data-background="#60c7f7">
+                <ul class="tech-contents">
+                    <li>CSS</li>
+                    <li>Canvas</li>
+                    <li>WebGL</li>
+                    <li>Web Animations API</li>
+                </ul>
+            </section>
+            -->
 
             <section data-background="#0ac2d2">
                 <section>
                     <h2>CSS</h2>
                 </section>
+                <!--
                 <section>
+                -->
                     <!-- TODO: turn each of these into an example? -->
+                <!--
                     <h3>Transforms</h3>
                     <ul>
                         <li>translate, translate3d</li>
@@ -147,8 +218,14 @@
                         <li>perspective</li>
                     </ul>
                 </section>
+                -->
+                <!--
                 <section>
-                    <h3>Animations defined in CSS</h3>
+                   TODO: parallax example to demonstrate perspective
+                </section>
+                -->
+                <section>
+                    <h3>Defined in CSS</h3>
                     <pre id="demo-cssanimation"><code class="css">
 @keyframes spin3d {
     0% { transform: rotateY(0deg); }
@@ -169,7 +246,7 @@
                     <small>NB. Vendor prefixes omitted for simplicity</small>
                 </section>
                 <section>
-                    <h3>Kicking off transforms with JS</h3>
+                    <h3>Via JavaScript</h3>
                     <pre><code class="javascript">
 snowFlake.style.transform = 'translate(' + snowLeft + 'px, -100%)';
 // wait a frame
@@ -180,6 +257,12 @@ snowFlake.style.transform = 'translate(' + snowLeft + 'px, ' +
         window.innerHeight + 'px)';
                     </code></pre>
                     <small><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">Example from HTML5Rocks.com</a></small>
+                </section>
+            </section>
+
+            <section data-background="">
+                <section>
+                    <h2>Web Animations API</h2>
                 </section>
                 <section>
                     <h3>element.animate()</h3>
@@ -192,116 +275,94 @@ snowFlake.animate([
                     <small><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">Example from HTML5Rocks.com</a></small>
                 </section>
                 <section>
-                    <video width="80%" controls>
-                        <!-- TODO: Maybe replace with periodic table one on iPhone 5S -->
-                        <source src="videos/threejs-css3d-molecules.mp4"/>
-                        <!--<source src="videosthreejs-css3d-molecules.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small><a href="http://threejs.org/examples/css3d_molecules">threejs.org/examples/css3d_molecules</a></small></p>
-                </section>
-                <section>
-                    <div>
-                        <iframe src="//player.vimeo.com/video/79659941" width="500" height="889" frameborder="0"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
-                    <small><a href="http://vimeo.com/79659941">React touch demo</a> (gallery demo from 2:10)<br/>
-                        Live demo at: <a href="http://petehunt.github.io/react-touch">petehunt.github.io/react-touch</a></small>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <!-- TODO: Maybe replace with same on iPhone 5S -->
-                        <source src="videos/cubeslam-mobile.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/cubeslam-mobile.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small><a href="https://www.cubeslam.com">cubeslam.com</a></small></p>
-                </section>
-                <!-- TODO: include parallax example? http://codepen.io/scottkellum/full/bHEcA/ -->
-                <section>
-                    <h3>Best for small numbers of DOM elements</h3>
-                    <p>See <a href="http://speedy-web-uis.herokuapp.com/">speedy-web-uis.herokuapp.com</a></p>
+                    <h3><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">bit.ly/elementanimate</a></h3>
                 </section>
             </section>
 
-            <section data-background="#7bb7fa">
+            <section data-background="">
                 <section>
                     <h2>Canvas</h2>
                 </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/run-pixie-run.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/run-pixie-run.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small><a href="http://www.goodboydigital.com/runpixierun/">Run Pixie Run</a> (Pixi.js)</small></p>
-                </section>
-                <!-- TODO: Another example - maybe Three.js CanvasRenderer? -->
-                <section>
-                    <h3>Best for game-like UIs when WebGL is unavailable</h3>
-                </section>
+                <!-- Maybe just say I won't go through this but include a link to learn more -->
             </section>
 
-            <section data-background="#60d7a9">
+            <section data-background="">
                 <section>
                     <h2>WebGL</h2>
                 </section>
-                <!-- TODO: An example... -->
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/pixijs-bunny-mark.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/pixijs-bunny-mark.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small><a href="http://bit.ly/bunnymark">bit.ly/bunnymark</a></small></p>
-                </section>
-                <section>
-                    <h3>WebGL <em>disabled</em></h3>
-                    <div>
-                        <ul class="smaller">
-                            <li>200 bunnies: 30 FPS</li>
-                            <li>1000 bunnies: 12 FPS</li>
-                            <li>2000 bunnies: 7 FPS</li>
-                        </ul>
-                        <img class="bunny" src="img/bunny-sad.png"/>
-                        <div class="notes">
-                            <small>
-                                Chrome Beta for Android on a Nexus 7 tablet.<br/>
-                                NB. Results vary a lot by device.
-                            </small>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h3>WebGL <em>enabled</em></h3>
-                    <div>
-                        <ul class="smaller">
-                            <li>200 bunnies: <span class="strike-through">30</span> <span class="highlight">59</span> FPS</li>
-                            <li>1000 bunnies <span class="strike-through">12</span> <span class="highlight">45</span> FPS</li>
-                            <li>2000 bunnies: <span class="strike-through">7</span> <span class="highlight">30</span> FPS</li>
-                        </ul>
-                        <img class="bunny" src="img/bunny-happy.png"/>
-                        <div class="notes">
-                            <small>
-                                Chrome Beta for Android on a Nexus 7 tablet.<br/>
-                                NB. Results vary a lot by device.
-                            </small>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h3>Best for performance when available</h3>
-                </section>
-                <section>
-                    <ul>
-                        <li>Chrome <span class="tick">✓</span></li>
-                        <li>Firefox <span class="tick">✓</span></li>
-                        <li>IE 11 <span class="tick">✓</span></li>
-                    </ul>
-                </section>
-                <section>
-                    <blockquote>
-                        <p>&ldquo;The final domino is teetering, about to fall. WebGL on Safari is coming&rdquo;</p>
-                    </blockquote>
-                    <p><small><a href="http://blog.playcanvas.com/apple-embraces-webgl/">blog.playcanvas.com/apple-embraces-webgl</a></small></p>
-                </section>
+                <!-- Maybe just say I won't go through this but include a link to learn more -->
             </section>
+
+            <section data-background="">
+                <section>
+                    <h2>Which?</h2>
+                </section>
+                <section data-background="#7bb7fa">
+                    <h2>CSS</h2>
+                    <h3>Best for (small numbers of) DOM elements</h3>
+                    <p><small>See <a href="http://speedy-web-uis.herokuapp.com/">speedy-web-uis.herokuapp.com</a></small></p>
+                </section>
+
+                <section data-background="#60d7a9">
+                    <h2>Canvas</h2>
+                    <h3>Best for game-like UIs when WebGL is unavailable</h3>
+                </section>
+
+                <section data-background="#60d7a9">
+                    <section>
+                        <h2>WebGL</h2>
+                        <h3>Best for performance when available</h3>
+                        <ul>
+                            <li>Chrome for Android <span class="tick">✓</span></li>
+                            <li>Firefox for Android <span class="tick">✓</span></li>
+                            <li>Opera Mobile <span class="tick">✓</span></li>
+                            <li>iOS Safari <span class="cross">✗</span></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <blockquote>
+                            <p>&ldquo;The final domino is teetering, about to fall. WebGL on Safari is coming&rdquo;</p>
+                        </blockquote>
+                        <p><small><a href="http://blog.playcanvas.com/apple-embraces-webgl/">blog.playcanvas.com/apple-embraces-webgl</a></small></p>
+                    </section>
+            </section>
+
+            <!--
+            <section>
+                <h3>WebGL <em>disabled</em></h3>
+                <div>
+                    <ul class="smaller">
+                        <li>200 bunnies: 30 FPS</li>
+                        <li>1000 bunnies: 12 FPS</li>
+                        <li>2000 bunnies: 7 FPS</li>
+                    </ul>
+                    <img class="bunny" src="img/bunny-sad.png"/>
+                    <div class="notes">
+                        <small>
+                            Chrome Beta for Android on a Nexus 7 tablet.<br/>
+                            NB. Results vary a lot by device.
+                        </small>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>WebGL <em>enabled</em></h3>
+                <div>
+                    <ul class="smaller">
+                        <li>200 bunnies: <span class="strike-through">30</span> <span class="highlight">59</span> FPS</li>
+                        <li>1000 bunnies <span class="strike-through">12</span> <span class="highlight">45</span> FPS</li>
+                        <li>2000 bunnies: <span class="strike-through">7</span> <span class="highlight">30</span> FPS</li>
+                    </ul>
+                    <img class="bunny" src="img/bunny-happy.png"/>
+                    <div class="notes">
+                        <small>
+                            Chrome Beta for Android on a Nexus 7 tablet.<br/>
+                            NB. Results vary a lot by device.
+                        </small>
+                    </div>
+                </div>
+            </section>
+            -->
 
             <section data-background="#54e3d0">
 
@@ -310,12 +371,42 @@ snowFlake.animate([
                     <small><a href="http://www.raizlabs.com/2012/09/great-animations-great-apps/">www.raizlabs.com/2012/09/great-animations-great-apps/</a></small>
                 </section>
 
+                <!--
                 <section>
                     <h3>Awesome animations for Mobile Web?</h3>
                     <div class="fragment">
                         <img src="img/yeswecan.jpg" width="700"/>
                         <p><small><a href="http://www.flickr.com/photos/joecrimmings/2238699461/">www.flickr.com/photos/joecrimmings/2238699461</a></small></p>
                     </div>
+                </section>
+                -->
+
+                <section>
+                    <!-- So take a look back at your mobile web apps, and if the animation looks like... -->
+                    <div id="demo-boring2" class="motion-example">
+                        <div class="container">
+
+                            <p>Lorem ipsum dolor sit amet.</p>
+
+                            <div class="motion">
+                                <ul>
+                                    <li>Wow</li>
+                                    <li>Such</li>
+                                    <li>Boring</li>
+                                    <li>Many</li>
+                                    <li>Dull</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <!-- Then remember: -->
+                    <img src="img/nocrouchrobot.png" alt="No Peter Crouch robot"/>
+
+                    <p><small><a href="http://blogs.infobae.com/like/2013/08/14/los-10-futbolistas-mas-altos-del-mundo/">blogs.infobae.com</a></small></p>
+
                 </section>
 
             </section>

@@ -371,10 +371,22 @@ body {
   margin-top: 1em; }
 .reveal .strike-through {
   text-decoration: line-through; }
+.reveal .tick,
+.reveal .cross {
+  text-shadow: 1px 1px 1px #666, -1px -1px 1px #666, 0px 1px 1px #666, 1px 0px 1px #666;
+  padding-left: 10px; }
+.reveal .tick {
+  color: #94d682; }
+.reveal .cross {
+  color: #fb611e; }
 .reveal section.title h1 {
   margin-bottom: 80px; }
 .reveal img.bunny {
   margin-top: 1em; }
+.reveal .tech-contents {
+  font-size: 2em; }
+  .reveal .tech-contents li {
+    line-height: 1.5em; }
 .reveal #demo-cssanimation {
   transition-property: transform;
   -webkit-transition-property: transform;
@@ -406,12 +418,12 @@ body {
       left: -2000px;
       -webkit-animation: slide-in-left2 10s ease-in-out infinite;
       animation: slide-in-left2 10s ease-in-out infinite; }
-.reveal #demo-boring {
+.reveal .motion-example {
   background: url(/img/iphone-frame-portrait.png) top left no-repeat;
   width: 360px;
   height: 710px;
   margin: 0 auto; }
-  .reveal #demo-boring .container {
+  .reveal .motion-example .container {
     border: 1px solid #666;
     background-color: #fff;
     width: 320px;
@@ -420,11 +432,11 @@ body {
     top: 115px;
     left: 20px;
     overflow: hidden; }
-    .reveal #demo-boring .container p {
+    .reveal .motion-example .container p {
       color: #333;
       font-size: 0.8em;
       padding: 1em; }
-  .reveal #demo-boring .motion {
+  .reveal .motion-example .motion {
     background-color: #4a78ab;
     height: 600px;
     width: 320px;
@@ -433,7 +445,7 @@ body {
     top: 0;
     -webkit-animation: slide-out-and-in 1.5s linear infinite;
     animation: slide-out-and-in 1.5s linear infinite; }
-    .reveal #demo-boring .motion ul {
+    .reveal .motion-example .motion ul {
       font-size: 0.8em;
       color: #ccc;
       margin-top: 1em; }
