@@ -128,12 +128,6 @@
                 </div>
             </section>
 
-            <!--
-            <section data-background="#0ac2d2">
-                <h2>Examples</h2>
-            </section>
-            -->
-
             <section data-background="#7bb7fa">
                 <section>
                     <h2>CSS3D</h2>
@@ -167,192 +161,109 @@
                     </video>
                     <p><small><a href="http://bit.ly/css3d-per">bit.ly/css3d-per</a> (Three.js CSS3DRenderer)</small></p>
                 </section>
+                <!--
                 <section>
                     <h3>Best for DOM-based UIs</h3>
                 </section>
-            </section>
-
-            <section data-background="#60d7a9">
-                <section>
-                    <h2>Canvas</h2>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/run-pixie-run-ios.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/run-pixie-run-ios.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small><a href="http://www.goodboydigital.com/runpixierun/">www.goodboydigital.com/runpixierun/</a> (Pixi.js)</small></p>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/knoggins.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/knoggins.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small>Knoggins (hackathon app)</small></p>
-                </section>
-                <section>
-                    <h3>Best for game-like UIs when WebGL is unavailable</h3>
-                </section>
-            </section>
-
-            <section data-background="#54e3d0">
-                <section>
-                    <h2>WebGL</h2>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/threejs-webgl-lines.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/threejs-webgl-lines.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small><a href="http://threejs.org/examples/webgl_lines_sphere.html">threejs.org/examples/webgl_lines_sphere.html</a></small></p>
-                </section>
-                <section>
-                    <h3><em>Without</em> WebGL</h3>
-                    <video width="70%" controls>
-                        <source src="videos/pixijs-bunny-mark-canvas.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/pixijs-bunny-mark-canvas.webm" type="video/webm;"/>-->
-                    </video>
-                    <p>
-                        <small>
-                            <a href="http://bit.ly/bunnymark">bit.ly/bunnymark</a> (Pixi.js)<br/>
-                            1000 bunnies @ ~14 FPS
-                        </small>
-                    </p>
-                </section>
-                <section>
-                    <h3><em>With</em> WebGL</h3>
-                    <video width="70%" controls>
-                        <source src="videos/pixijs-bunny-mark-webgl.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/pixijs-bunny-mark-webgl.webm" type="video/webm;"/>-->
-                    </video>
-                    <p>
-                        <small>
-                            <a href="http://bit.ly/bunnymark">bit.ly/bunnymark</a> (Pixi.js)<br/>
-                            1000 bunnies @ ~58 FPS
-                        </small>
-                    </p>
-                </section>
-                <section>
-                    <h3>Best for performance when available</h3>
-                    <ul>
-                        <li>Chrome for Android <span class="tick">✓</span></li>
-                        <li>Firefox for Android <span class="tick">✓</span></li>
-                        <li>Opera Mobile <span class="tick">✓</span></li>
-                        <li>iOS Safari <span class="fragment tick">✓</span></li>
-                    </ul>
-                </section>
-            </section>
-
-            <section data-background="#60c7f7">
-                <section>
-                    <h3>Clearly it's possible</h3>
-                    <h3 class="fragment">But it can be tricky...</h3>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/threejs-css3d-100.mp4" type="video/mp4;"/>
-                        <source src="videos/threejs-css3d-100.webm" type="video/webm;"/>
-                    </video>
-                    <p><small>ZamBlocks experiment (Three.js CSS3DRenderer)</small></p>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/threejs-canvas-text-optimised.mp4" type="video/mp4;"/>
-                        <source src="videos/threejs-canvas-text-optimised.webm" type="video/webm;"/>
-                    </video>
-                    <p><small>ZamBlocks experiment (Three.js CanvasRenderer)</small></p>
-                </section>
-                <section>
-                    <h3>The story of the struggle...</h3>
-                    <p><a href="http://bit.ly/attempting-fast-3d-graphics">bit.ly/attempting-fast-3d-graphics</a></p>
-                </section>
+                -->
             </section>
 
             <section data-background="#0ac2d2">
                 <section>
-                    <h2>Tips</h2>
+                    <h2>Top 10 tips</h2>
                 </section>
                 <section>
-                    <h3>Tip 1: Where possible, define in CSS</h3>
+                    <h3>Tip 1: Where possible, define animations in CSS</h3>
                     <!-- E.g. fade out, just need to kick off - no need to cancel or control frame by frame -->
                     <!-- JavaScript can be used to toggle classes -->
                     <!-- Browser can optimise & run without hanging JavaScript -->
+                    <div class="fragment">
+                        <ul>
+                            <li>When you don't need to control frame by frame</li>
+                            <li>E.g. Fade out animation on delete</li>
+                        </ul>
+                        <p><small><a href="todo">TODO</a></small></p>
+                    </div>
+                </section>
+                <section>
+                    <h3>Tip 2: Stick to: translate, scale, rotate, opacity</h3>
+                    <!-- They're the four things a browser can "animate cheaply" -->
+                    <!-- "Transition everything else at your own risk" -->
+                    <div class="fragment">
+                        <ul>
+                            <li>"Transition everything else at your own risk"</li>
+                        </ul>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">www.html5rocks.com/en/tutorials/speed/high-performance-animations/</a></small></p>
+                    </div>
                 </section>
                 <section>
                     <h3>Tip 2: Don't tie animation into user input, e.g. scrolling</h3>
                     <!-- TODO need to read up on this... -->
                 </section>
                 <section>
-                    <h3>Tip 3: Use requestAnimationFrame, not setTimeout/setInterval</h3>
-                    <!-- ... -->
+                    <h3>Tip 3: Use requestAnimationFrame (not setInterval/setTimeout)</h3>
+                    <div class="fragment">
+                        <ul>
+                            <li>Get called when the browser is ready</li>
+                            <li>Keeps frame rate more consistent</li>
+                            <li>Animations in background tabs get paused</li>
+                        </ul>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
+                    </div>
                 </section>
                 <section>
-                    <h3>Tip 4: Aim for 60 FPS</h3>
-                    <!-- You have 16ms? to prepare each frame -->
+                    <h3>Tip 4: For 60 FPS, you have 16ms to prepare each frame</h3>
+                    <!-- Make sure your rAF callback doesn't take longer, or else the framerate will drop -->
+                    <div class="fragment">
+                        <ul>
+                            <li>Do your best to ensure you don't take longer...</li>
+                        </ul>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
+                    </div>
                 </section>
                 <section>
-                    <h3>Tip 5: Move JavaScript calculation into WebWorkers</h3>
-                    <!-- With native iOS development, you do as much as possible away from main UI thread -->
+                    <h3>Tip 5: Analyse the performance...</h3>
+                    <div class="fragment">
+                        <ul>
+                            <li>Use <a href="https://github.com/mrdoob/stats.js/">stats.js</a> to measure FPS</li>
+                            <li>Use the Dev Tools Timeline to analyse deeper</li>
+                        </ul>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
+                    </div>
+                </section>
+                <section>
+                    <h3>Tip 6: Move heavy JavaScript calculations into WebWorkers?</h3>
+                    <!-- With native iOS development, you do as much as possible away from the main UI thread -->
                     <!-- But with JS, there's only one thread, except if you use a WebWorker... -->
-                </section>
-                <section>
-                    <h3>Tip 6: Or chunk it down &amp; move into rAF callback</h3>
-                </section>
-                <section>
-                    <h3>Tip 7: When available, use Web Animations API</h3>
-                </section>
-                <!-- TODO more tips...? -->
-            </section>
-<!--
-            <section data-background="#60c7f7">
-                <h2>How?</h2>
-            </section>
-
-            <section data-background="#0ac2d2">
-                <h2>CSS</h2>
-                <ul>
-                -->
-                    <!-- TODO useful links - places to start -->
-                <!--
-                    <li><a href="http://michaelobriena.github.io/blog/2013/09/28/understanding-the-threejs-css3drenderer/">Three.js CSS3DRenderer</a></li>
-                </ul>
-                -->
-                <!-- TODO: turn each of these into an example? -->
-                <!--
-                    <h3>Transforms</h3>
                     <ul>
-                        <li>translate, translate3d</li>
-                        <li>scale, scale3d</li>
-                        <li>rotate, rotate3d</li>
-                        <li>matrix, matrix3d</li>
-                        <li>skew</li>
-                        <li>perspective</li>
+                        <li>E.g. </li>
+                    </ul>
+                    <p><small>Read more at: <a href="https://gist.github.com/petehunt/7618353/"></a></small></p>
+                </section>
+                <section>
+                    <h3>Tip 7: ...Or chunk them down &amp; move into rAF callback</h3>
+                    <!-- So you can ensure that you perform the calculation within the time that -->
+                    <!-- the browser is waiting ready for a new frame, and not interrupt it -->
+                </section>
+                <section>
+                    <h3>Tip 8: Use a Virtual DOM system like React.js</h3>
+                    <!-- StaticContainer can pause updates to components until their animation completes -->
+                    <!-- "This is a great feature of React since it'll prevent you from accidentally messing up
+                    <!-- the animation if you need to do more work in a child component" -->
+                </section>
+                <section>
+                    <h3>Tip 9: Progressively enhance based on frame rate?</h3>
+                    <ul>
+                        <li></li>
                     </ul>
                 </section>
-                -->
-<!--
+                <section>
+                    <h3>Tip 10: When available, use the Web Animations API</h3>
+                    <ul>
+                        <li>...</li>
+                    </ul>
+                </section>
             </section>
-
-            <section data-background="#7bb7fa">
-                <h2>Canvas</h2>
-                <ul>
-                -->
-                    <!-- TODO useful links - places to start -->
-                <!--
-                    <li>Three.js CanvasRenderer</li>
-                </ul>
-            </section>
-
-            <section data-background="#60d7a9">
-                <h2>WebGL</h2>
-                <ul>
-                -->
-                    <!-- TODO useful links - places to start -->
-                <!--
-                    <li></li>
-                </ul>
-            </section>
--->
 
             <section data-background="#54e3d0">
                 <section>
@@ -407,6 +318,168 @@ snowFlake.animate([
                     <!-- Include AnimationPlayer: cancel, onFinish -->
                 </section>
             </section>
+
+            <section data-background="#60d7a9">
+                <section>
+                    <h2>Canvas</h2>
+                </section>
+                <section>
+                    <video width="80%" controls>
+                        <source src="videos/run-pixie-run-ios.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/run-pixie-run-ios.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://www.goodboydigital.com/runpixierun/">www.goodboydigital.com/runpixierun/</a> (Pixi.js)</small></p>
+                </section>
+                <section>
+                    <video controls>
+                        <source src="videos/knoggins.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/knoggins.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small>Knoggins (hackathon app)</small></p>
+                </section>
+                <!--
+                <section>
+                    <h3>Best for game-like UIs when WebGL is unavailable</h3>
+                </section>
+                -->
+            </section>
+
+            <section data-background="#54e3d0">
+                <section>
+                    <h2>WebGL</h2>
+                </section>
+                <section>
+                    <video width="80%" controls>
+                        <source src="videos/threejs-webgl-lines.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/threejs-webgl-lines.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://threejs.org/examples/webgl_lines_sphere.html">threejs.org/examples/webgl_lines_sphere.html</a></small></p>
+                </section>
+                <section>
+                    <h3><em>Without</em> WebGL</h3>
+                    <video width="70%" controls>
+                        <source src="videos/pixijs-bunny-mark-canvas.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/pixijs-bunny-mark-canvas.webm" type="video/webm;"/>-->
+                    </video>
+                    <p>
+                        <small>
+                            <a href="http://bit.ly/bunnymark">bit.ly/bunnymark</a> (Pixi.js)<br/>
+                            1000 bunnies @ ~14 FPS
+                        </small>
+                    </p>
+                </section>
+                <section>
+                    <h3><em>With</em> WebGL</h3>
+                    <video width="70%" controls>
+                        <source src="videos/pixijs-bunny-mark-webgl.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/pixijs-bunny-mark-webgl.webm" type="video/webm;"/>-->
+                    </video>
+                    <p>
+                        <small>
+                            <a href="http://bit.ly/bunnymark">bit.ly/bunnymark</a> (Pixi.js)<br/>
+                            1000 bunnies @ ~58 FPS
+                        </small>
+                    </p>
+                </section>
+                <section>
+                    <h3>Mobile support</h3>
+                    <ul>
+                        <li>Chrome for Android <span class="tick">✓</span></li>
+                        <li>Firefox for Android <span class="tick">✓</span></li>
+                        <li>Opera Mobile <span class="tick">✓</span></li>
+                        <li>iOS Safari <span class="fragment tick">;-)</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Tip 11: Use WebGL! (With fallbacks)</h3>
+                    <div class="fragment">
+                        <ul>
+                            <li><a href="https://github.com/mrdoob/three.js/blob/master/examples/js/Detector.js">three.js Detector.js</a></li>
+                            <li><a href="http://www.goodboydigital.com/pixijs/docs/classes/autoDetectRenderer.html">Pixi.js autoDetectRenderer</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <!-- This seems a bit redundant now that WebGL is feasible for mobile? -->
+            <!--
+            <section data-background="#60c7f7">
+                <section>
+                    <h3>Clearly it's possible</h3>
+                    <h3 class="fragment">But it's not always easy...</h3>
+                </section>
+                <section>
+                    <video width="80%" controls>
+                        <source src="videos/threejs-css3d-100.mp4" type="video/mp4;"/>
+                        <source src="videos/threejs-css3d-100.webm" type="video/webm;"/>
+                    </video>
+                    <p><small>ZamBlocks experiment (Three.js CSS3DRenderer)</small></p>
+                </section>
+                <section>
+                    <video width="80%" controls>
+                        <source src="videos/threejs-canvas-text-optimised.mp4" type="video/mp4;"/>
+                        <source src="videos/threejs-canvas-text-optimised.webm" type="video/webm;"/>
+                    </video>
+                    <p><small>ZamBlocks experiment (Three.js CanvasRenderer)</small></p>
+                </section>
+                <section>
+                    <h3>The story of my struggle...</h3>
+                    <p><a href="http://bit.ly/attempting-fast-3d-graphics">bit.ly/attempting-fast-3d-graphics</a></p>
+                </section>
+            </section>
+            -->
+
+<!--
+            <section data-background="#60c7f7">
+                <h2>How?</h2>
+            </section>
+
+            <section data-background="#0ac2d2">
+                <h2>CSS</h2>
+                <ul>
+                -->
+                    <!-- TODO useful links - places to start -->
+                <!--
+                    <li><a href="http://michaelobriena.github.io/blog/2013/09/28/understanding-the-threejs-css3drenderer/">Three.js CSS3DRenderer</a></li>
+                </ul>
+                -->
+                <!-- TODO: turn each of these into an example? -->
+                <!--
+                    <h3>Transforms</h3>
+                    <ul>
+                        <li>translate, translate3d</li>
+                        <li>scale, scale3d</li>
+                        <li>rotate, rotate3d</li>
+                        <li>matrix, matrix3d</li>
+                        <li>skew</li>
+                        <li>perspective</li>
+                    </ul>
+                </section>
+                -->
+<!--
+            </section>
+
+            <section data-background="#7bb7fa">
+                <h2>Canvas</h2>
+                <ul>
+                -->
+                    <!-- TODO useful links - places to start -->
+                <!--
+                    <li>Three.js CanvasRenderer</li>
+                </ul>
+            </section>
+
+            <section data-background="#60d7a9">
+                <h2>WebGL</h2>
+                <ul>
+                -->
+                    <!-- TODO useful links - places to start -->
+                <!--
+                    <li></li>
+                </ul>
+            </section>
+-->
+
 
             <!--
             <section data-background="#60c7f7">
@@ -488,6 +561,16 @@ snowFlake.animate([
                 </section>
             </section>
 
+            <section data-background="#0ac2d2">
+                <div id="demo-question">
+                    <h1 class="one">Thank you</h1>
+                    <h2 class="two">Questions?</h2>
+                    <h2 class="three">Thoughts?</h2>
+                </div>
+                <h4>@poshaughnessy</h4>
+                <h4><a href="http://awesome-mobile-animations.herokuapp.com/">awesome-mobile-animations.herokuapp.com</a></h4>
+            </section>
+
             <section data-background="#60c7f7">
                 <h2>Further reading</h2>
                 <ul class="further-reading">
@@ -501,16 +584,6 @@ snowFlake.animate([
                     <li><a href="http://www.peteroshaughnessy.com/post/60868538533/attempting-fast-3d-graphics-for-mobile-web-without">Attempting fast 3D graphics for mobile web, without WebGL</a> (Three.js, Pixi.js)</li>
                     <!--<li><a href="http://michaelobriena.github.io/blog/2013/09/28/understanding-the-threejs-css3drenderer/">"Understanding the Three.js CSS3DRenderer"</a></li>-->
                 </ul>
-            </section>
-
-            <section data-background="#0ac2d2">
-                <div id="demo-question">
-                    <h1 class="one">Thank you</h1>
-                    <h2 class="two">Questions?</h2>
-                    <h2 class="three">Thoughts?</h2>
-                </div>
-                <h4>@poshaughnessy</h4>
-                <h4><a href="http://awesome-mobile-animations.herokuapp.com/">awesome-mobile-animations.herokuapp.com</a></h4>
             </section>
 
         </div>
