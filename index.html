@@ -295,10 +295,15 @@
                     <!-- You have 16ms? to prepare each frame -->
                 </section>
                 <section>
-                    <h3>Tip 5: Chunk down JavaScript calculations &amp; move into rAF callback</h3>
+                    <h3>Tip 5: Move JavaScript calculation into WebWorkers</h3>
+                    <!-- With native iOS development, you do as much as possible away from main UI thread -->
+                    <!-- But with JS, there's only one thread, except if you use a WebWorker... -->
                 </section>
                 <section>
-                    <h3>Tip 6: When available, use Web Animations API</h3>
+                    <h3>Tip 6: Or chunk it down &amp; move into rAF callback</h3>
+                </section>
+                <section>
+                    <h3>Tip 7: When available, use Web Animations API</h3>
                 </section>
                 <!-- TODO more tips...? -->
             </section>
