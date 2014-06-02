@@ -264,7 +264,8 @@ $selectionBackgroundColor: #134674;
   p + small,
   h2 + small,
   h3 + small,
-  h3 + p {
+  h3 + p,
+  ul + p {
     margin-top: 2em;
   }
 
