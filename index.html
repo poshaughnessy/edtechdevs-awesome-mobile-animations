@@ -181,10 +181,11 @@
                     <!-- Browser can optimise & run without hanging JavaScript -->
                     <div class="fragment">
                         <ul>
+                            <li>Browser can optimise and run without separately from JavaScript</li>
                             <li>When you don't need to control frame by frame</li>
                             <li>E.g. Fade out animation on delete</li>
                         </ul>
-                        <p><small><a href="todo">TODO</a></small></p>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">www.html5rocks.com/en/tutorials/speed/high-performance-animations/</a></small></p>
                     </div>
                 </section>
                 <section>
@@ -193,7 +194,9 @@
                     <!-- "Transition everything else at your own risk" -->
                     <div class="fragment">
                         <ul>
+                            <li>The 4 things a browser can "animate cheaply"</li>
                             <li>"Transition everything else at your own risk"</li>
+                            <li>Translate vs top,left: <a href="http://youtu.be/-62uPWUxgcg">http://youtu.be/-62uPWUxgcg</a></li>
                         </ul>
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">www.html5rocks.com/en/tutorials/speed/high-performance-animations/</a></small></p>
                     </div>
@@ -218,7 +221,7 @@
                     <!-- Make sure your rAF callback doesn't take longer, or else the framerate will drop -->
                     <div class="fragment">
                         <ul>
-                            <li>Do your best to ensure you don't take longer...</li>
+                            <li>Make sure your rAF callback doesn't take longer, or framerate will drop</li>
                         </ul>
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
                     </div>
@@ -234,42 +237,61 @@
                     </div>
                 </section>
                 <section>
-                    <h3>Tip 6: Move heavy JavaScript calculations into WebWorkers?</h3>
+                    <h3>Tip 6: Move heavy JavaScript calculations into Web Workers</h3>
                     <!-- With native iOS development, you do as much as possible away from the main UI thread -->
                     <!-- But with JS, there's only one thread, except if you use a WebWorker... -->
-                    <ul>
-                        <li>E.g. </li>
-                    </ul>
-                    <p><small>Read more at: <a href="https://gist.github.com/petehunt/7618353/"></a></small></p>
+                    <div class="fragment">
+                        <ul>
+                            <li>Native developers know not to overload the main UI thread</li> <!-- to keep it free for a responsive UI -->
+                            <li>Web Workers bring threading to JavaScript</li>
+                            <!-- Utilise multiple CPU cores -->
+                        </ul>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/workers/basics/">www.html5rocks.com/en/tutorials/workers/basics/</a></small></p>
+                    </div>
                 </section>
                 <section>
                     <h3>Tip 7: ...Or chunk them down &amp; move into rAF callback</h3>
                     <!-- So you can ensure that you perform the calculation within the time that -->
                     <!-- the browser is waiting ready for a new frame, and not interrupt it -->
+                    <div class="fragment">
+                        <ul>
+                            <li>Ensure you don't delay frame rendering</li>
+                        </ul>
+                        <p><small><a href=""></a></small></p>
+                    </div>
                 </section>
                 <section>
                     <h3>Tip 8: Use a Virtual DOM system like React.js</h3>
                     <!-- StaticContainer can pause updates to components until their animation completes -->
                     <!-- "This is a great feature of React since it'll prevent you from accidentally messing up
                     <!-- the animation if you need to do more work in a child component" -->
+                    <div class="fragment">
+                        <ul>
+                            <li>StaticContainer can pause updates to components until their animation completes</li>
+                            <li>&ldquo;Prevent you from accidentally messing up animation&rdquo;</li>
+                        </ul>
+                    </div>
                 </section>
                 <section>
-                    <h3>Tip 9: Progressively enhance based on frame rate?</h3>
-                    <ul>
-                        <li></li>
-                    </ul>
+                    <h3>Tip 9: Progressively enhanced animations based on frame rate?</h3>
+                    <div class="fragment">
+                        <ul>
+                            <li>Could use FPS to determine which level of animation complexity</li>
+                            <li>Fall back to light transitions if framerate struggling</li>
+                            <li>Or ramp up as long as framerate still looking good...</li>
+                            <li>&ldquo;Polling frame delay for selective features is pretty common in video games and great to apply to UIs...&rdquo; -@neilvoss</li>
+                        </ul>
+                    </div>
                 </section>
                 <section>
-                    <h3>Tip 10: When available, use the Web Animations API</h3>
-                    <ul>
-                        <li>...</li>
-                    </ul>
+                    <h3>Tip 10: When available, use the Web Animations API...</h3>
                 </section>
             </section>
 
             <section data-background="#54e3d0">
                 <section>
                     <h2>Web Animations API</h2>
+                    <!-- New API - currently in W3C Editor's Draft - partial support in Chrome Beta -->
                 </section>
                 <section>
                     <h3>Declarative is best for performance</h3>
@@ -293,7 +315,7 @@
                     <small>NB. Vendor prefixes omitted for simplicity</small>
                 </section>
                 <section>
-                    <h3>But imperative is best for control</h3>
+                    <h3>But you often need to control through JavaScript</h3>
                     <pre><code class="javascript">
 snowFlake.style.transform = 'translate(' + snowLeft + 'px, -100%)';
 // wait a frame
@@ -306,7 +328,7 @@ snowFlake.style.transform = 'translate(' + snowLeft + 'px, ' +
                     <small><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">Example from HTML5Rocks.com</a></small>
                 </section>
                 <section>
-                    <h3>element.animate()</h3>
+                    <h3>element.animate() gives best of both</h3>
                     <pre><code class="javascript">
 snowFlake.animate([
     {transform: 'translate(' + snowLeft + 'px, -100%)'},
@@ -316,8 +338,18 @@ snowFlake.animate([
                     <small><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">bit.ly/elementanimate</a></small>
                 </section>
                 <section>
-                    <!-- TODO more on Web Animations API -->
-                    <!-- Include AnimationPlayer: cancel, onFinish -->
+                    <h3>AnimationPlayer</h3>
+                    <pre><code class="javascript">
+var player = snowFlake.animate( ... );
+// Changed my mind
+player.cancel();
+
+var player = snowFlake.animate( ... );
+player.onfinish = function(e) {
+    console.log('Snowflake landed!');
+}
+                    </code></pre>
+                    <small><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">bit.ly/elementanimate</a></small>
                 </section>
             </section>
 
@@ -523,6 +555,14 @@ snowFlake.animate([
                 <section>
                     <h2>&ldquo;Great animations <br>make great apps&rdquo;</h2>
                     <small><a href="http://www.raizlabs.com/2012/09/great-animations-great-apps/">www.raizlabs.com/2012/09/great-animations-great-apps/</a></small>
+                </section>
+                <section>
+                    <!-- Recap... -->
+                    <ul>
+                        <li>CSS</li>
+                        <li>Canvas</li>
+                        <li>WebGL</li>
+                    </ul>
                 </section>
                 <!--
                 <section>
