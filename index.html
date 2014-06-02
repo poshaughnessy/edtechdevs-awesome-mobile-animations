@@ -122,8 +122,10 @@
 
             <section data-background="#60c7f7">
                 <h3>Mobile apps are becoming more fluid</h3>
-                <h3 class="fragment">But those examples were all native</h3>
-                <h3 class="fragment">What about Mobile Web?</h3>
+                <div class="fragment">
+                    <h3>But those examples were all native</h3>
+                    <h3>What about Mobile Web?</h3>
+                </div>
             </section>
 
             <!--
@@ -137,12 +139,12 @@
                     <h2>CSS3D</h2>
                 </section>
                 <section>
-                    <div>
-                        <iframe src="//player.vimeo.com/video/79659941" width="500" height="889" frameborder="0"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
-                    <small><a href="http://vimeo.com/79659941">React touch demo</a> (menu @ 0:43, gallery @ 2:10)<br/>
-                        Live demo at: <a href="http://petehunt.github.io/react-touch">petehunt.github.io/react-touch</a></small>
+                    <video controls>
+                        <source src="videos/react-touch-demo.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/react-touch-demo.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small><a href="http://vimeo.com/79659941">React touch demo</a> (menu @ 0:43, gallery @ 2:10)<br/>
+                        Live demo at: <a href="http://petehunt.github.io/react-touch">petehunt.github.io/react-touch</a></small></p>
                 </section>
                 <section>
                     <video width="80%" controls>
@@ -236,14 +238,8 @@
                         <li>Chrome for Android <span class="tick">✓</span></li>
                         <li>Firefox for Android <span class="tick">✓</span></li>
                         <li>Opera Mobile <span class="tick">✓</span></li>
-                        <li>iOS Safari <span class="cross">✗</span></li>
+                        <li>iOS Safari <span class="fragment tick">✓</span></li>
                     </ul>
-                </section>
-                <section>
-                    <blockquote>
-                        <p>&ldquo;The final domino is teetering, about to fall. WebGL on Safari is coming&rdquo;</p>
-                    </blockquote>
-                    <p><small><a href="http://blog.playcanvas.com/apple-embraces-webgl/">blog.playcanvas.com/apple-embraces-webgl</a></small></p>
                 </section>
             </section>
 
