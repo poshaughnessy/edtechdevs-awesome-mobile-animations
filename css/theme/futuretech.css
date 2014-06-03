@@ -235,43 +235,23 @@ body {
 
 @-webkit-keyframes slide-out-and-in {
   0% {
-    transform: translateX(0); }
+    left: 0px; }
 
   50% {
-    transform: translateX(-320px); }
+    left: -320px; }
 
   95% {
-    transform: translateX(0); } }
-
-@-moz-keyframes slide-out-and-in {
-  0% {
-    transform: translateX(0); }
-
-  50% {
-    transform: translateX(-320px); }
-
-  95% {
-    transform: translateX(0); } }
-
-@-o-keyframes slide-out-and-in {
-  0% {
-    transform: translateX(0); }
-
-  50% {
-    transform: translateX(-320px); }
-
-  95% {
-    transform: translateX(0); } }
+    left: 0px; } }
 
 @keyframes slide-out-and-in {
   0% {
-    transform: translateX(0); }
+    left: 0; }
 
   50% {
-    transform: translateX(-320px); }
+    left: -320px; }
 
   95% {
-    transform: translateX(0); } }
+    left: 0; } }
 
 @-webkit-keyframes spin3d {
   from {
@@ -406,6 +386,8 @@ body {
   font-size: 1.6em; }
   .reveal .recap li {
     margin-bottom: 1em; }
+.reveal .bad-example h4 {
+  margin-top: -30px; }
 .reveal #demo-cssanimation {
   transition-property: transform;
   -webkit-transition-property: transform;
@@ -438,25 +420,25 @@ body {
       left: 0;
       -webkit-animation: slide-in-left2 10s ease-in-out infinite;
       animation: slide-in-left2 10s ease-in-out infinite; }
-.reveal .motion-example {
+.reveal .demo-boring {
   background: url(/img/iphone-frame-portrait.png) top left no-repeat;
   width: 360px;
   height: 710px;
-  margin: -30px auto 0 auto; }
-  .reveal .motion-example .container {
+  margin: 0 auto; }
+  .reveal .demo-boring .container {
     border: 1px solid #666;
     background-color: #fff;
-    width: 320px;
+    width: 319px;
     height: 480px;
     position: relative;
     top: 115px;
     left: 20px;
     overflow: hidden; }
-    .reveal .motion-example .container p {
+    .reveal .demo-boring .container p {
       color: #333;
       font-size: 0.8em;
       padding: 1em; }
-  .reveal .motion-example .motion {
+  .reveal .demo-boring .moveme {
     background-color: #4a78ab;
     height: 600px;
     width: 320px;
@@ -465,7 +447,7 @@ body {
     top: 0;
     -webkit-animation: slide-out-and-in 1.5s linear infinite;
     animation: slide-out-and-in 1.5s linear infinite; }
-    .reveal .motion-example .motion ul {
+    .reveal .demo-boring .moveme ul {
       font-size: 0.8em;
       color: #ccc;
       margin-top: 1em; }

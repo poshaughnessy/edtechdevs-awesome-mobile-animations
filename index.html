@@ -46,14 +46,15 @@
             </section>
 
             <section data-background="#60d7a9">
-                <section>
+                <section class="bad-example">
                     <!-- What's wrong with this animation? -->
-                    <div id="demo-boring" class="motion-example">
+                    <h4>What's wrong with...</h4>
+                    <div class="demo-boring">
                         <div class="container">
 
                             <p>Lorem ipsum dolor sit amet.</p>
 
-                            <div class="motion">
+                            <div class="moveme">
                                 <ul>
                                     <li>Lorem</li>
                                     <li>Ipsum</li>
@@ -68,7 +69,8 @@
 
                 <section>
                     <!-- The motion feels boring and not realistic. It's the equivalent of this... -->
-                    <iframe width="800" height="600" src="//www.youtube.com/embed/96eSrFlUVh0?html5=1"
+                    <h4>It's like...</h4>
+                    <iframe width="700" height="525" src="//www.youtube.com/embed/96eSrFlUVh0?html5=1"
                             frameborder="0" allowfullscreen></iframe>
                 </section>
 
@@ -131,7 +133,7 @@
 
             <section data-background="#0ac2d2">
                 <section>
-                    <h2>CSS3D</h2>
+                    <h2>CSS</h2>
                 </section>
                 <section>
                     <video controls>
@@ -202,6 +204,26 @@
                         </ul>
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">www.html5rocks.com/en/tutorials/speed/high-performance-animations/</a></small></p>
                     </div>
+                </section>
+                <section>
+                    <h4>Real example</h4>
+                    <pre><code class="css">
+@keyframes slide-in-left1 {
+    0% {
+        transform: translateX(-2000px);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+                    </code></pre>
+                    <small>NB. Vendor prefixes omitted for simplicity</small>
                 </section>
                 <section>
                     <h3>Tip 3: Use requestAnimationFrame (not setInterval/setTimeout)</h3>
@@ -602,14 +624,15 @@ player.onfinish = function(e) {
                     </div>
                 </section>
                 -->
-                <section>
+                <section class="bad-example">
                     <!-- So take a look back at your mobile web apps, and if the animation looks like... -->
-                    <div id="demo-boring2" class="motion-example">
+                    <h3>So if your animations look like:</h3>
+                    <div class="demo-boring">
                         <div class="container">
 
                             <p>Boooooooorrrriiinngg.</p>
 
-                            <div class="motion">
+                            <div class="moveme">
                                 <ul>
                                     <li>Wow</li>
                                     <li>Such</li>
@@ -627,8 +650,8 @@ player.onfinish = function(e) {
 
                     <p><small><a href="http://blogs.infobae.com/like/2013/08/14/los-10-futbolistas-mas-altos-del-mundo/">blogs.infobae.com</a></small></p>
 
-                    <h3><span class="fragment">Don't be a robot.</span> <span class="fragment">Be fluid.</span></h3>
-                    <h4 class="fragment">Make your mobile animations <em>awesome</em>.</h4>
+                    <h3>Remember: <span class="fragment">Don't be a robot.</span> <span class="fragment">Be fluid.</span></h3>
+                    <!--<h4 class="fragment">Make your mobile animations <em>awesome</em>.</h4>-->
 
                 </section>
             </section>

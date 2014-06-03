@@ -153,25 +153,16 @@ $selectionBackgroundColor: #134674;
 }
 
 // Slide out and in
+// NB. Purposefully using 'left' instead of 'translate' to demonstrate point.
 @-webkit-keyframes slide-out-and-in {
-  0%   { transform: translateX(0); }
-  50% { transform: translateX(-320px); }
-  95% { transform: translateX(0); }
-}
-@-moz-keyframes slide-out-and-in {
-  0%   { transform: translateX(0); }
-  50% { transform: translateX(-320px); }
-  95% { transform: translateX(0); }
-}
-@-o-keyframes slide-out-and-in {
-  0%   { transform: translateX(0); }
-  50% { transform: translateX(-320px); }
-  95% { transform: translateX(0); }
+  0%   { left: 0px; }
+  50% { left: -320px; }
+  95% { left: 0px; }
 }
 @keyframes slide-out-and-in {
-  0%   { transform: translateX(0); }
-  50% { transform: translateX(-320px); }
-  95% { transform: translateX(0); }
+  0%   { left: 0; }
+  50% { left: -320px; }
+  95% { left: 0; }
 }
 
 // Spin 3D
@@ -375,6 +366,10 @@ $selectionBackgroundColor: #134674;
 
   }
 
+  .bad-example h4 {
+    margin-top: -30px;
+  }
+
   // Embedded examples
 
   #demo-cssanimation {
@@ -424,17 +419,17 @@ $selectionBackgroundColor: #134674;
 
   }
 
-  .motion-example {
+  .demo-boring {
 
     background: url(/img/iphone-frame-portrait.png) top left no-repeat;
     width: 360px;
     height: 710px;
-    margin: -30px auto 0 auto;
+    margin: 0 auto;
 
     .container {
       border: 1px solid #666;
       background-color: #fff;
-      width: 320px;
+      width: 319px;
       height: 480px;
       position: relative;
       top: 115px;
@@ -449,7 +444,7 @@ $selectionBackgroundColor: #134674;
 
     }
 
-    .motion {
+    .moveme {
       background-color: #4a78ab;
       height: 600px;
       width: 320px;
