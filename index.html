@@ -280,7 +280,7 @@
                     </div>
                 </section>
                 <section>
-                    <h3>Tip 5: Analyse the performance...</h3>
+                    <h3>Tip 5: Measure and optimise...</h3>
                     <div class="fragment">
                         <ul>
                             <li>Use <a href="https://github.com/mrdoob/stats.js/">stats.js</a> to measure FPS</li>
@@ -322,7 +322,7 @@
                     </div>
                 </section>
                 <section>
-                    <h3>Tip 7: ...Or chunk them down &amp; move into rAF callback</h3>
+                    <h3>Tip 7: ...Or chunk it down &amp; move into rAF callback</h3>
                     <!-- So you can ensure that you perform the calculation within the time that -->
                     <!-- the browser is waiting ready for a new frame, and not interrupt it -->
                     <div class="fragment">
@@ -333,19 +333,27 @@
                     </div>
                 </section>
                 <section>
-                    <h3>Tip 8: Use a Virtual DOM system like React.js</h3>
+                    <h3>Tip 8: Use a <em>virtual DOM</em> system like React.js</h3>
                     <!-- StaticContainer can pause updates to components until their animation completes -->
                     <!-- "This is a great feature of React since it'll prevent you from accidentally messing up
                     <!-- the animation if you need to do more work in a child component" -->
+                    <!-- Just *reading* from the DOM can cause (or bring forward) recalculation -->
+                    <!-- A common best practise is to batch DOM operations -->
+                    <!-- React also uses requestAnimationFrame -->
+                    <!-- Ractive is another example -->
+                    <!-- React's "declarative interface allows simply writing how the document tree should look -->
+                    <!-- and it will intelligently determine which changes need to be made -->
+                    <!-- "one way data binding" -->
+                    <!-- "Javascript is so much faster than the DOM" -->
+                    <!-- Also because UI built in JS, allows server-side rendering for fast initial page views -->
                     <div class="fragment">
                         <ul>
-                            <li>Diffs render results &amp; generates minimal set of changes to apply to DOM</li>
-                            <li>Avoid unnecessary document reflows</li>
-                            <li>Can pause updates to components until their animation completes</li>
-                            <li>&ldquo;Prevent you from accidentally messing up animation&rdquo;</li>
+                            <li>Only applies minimal set of changes to DOM</li>
+                            <li>Avoid unnecessary reflows &amp; repaints</li>
+                            <li>Can pause updates to components until their animation completes</li> <!--Prevent you from accidentally messing up animation-->
                         </ul>
-                        <!-- TODO do more research on this -->
-                        <p><small><a href="https://gist.github.com/petehunt/7618353#comment-957122">gist.github.com/petehunt/7618353#comment-957122</a></small></p>
+                        <!--<p><small><a href="https://gist.github.com/petehunt/7618353#comment-957122">gist.github.com/petehunt/7618353#comment-957122</a></small></p>-->
+                        <p><small><a href="http://www.phpied.com/remarkable-react/">http://www.phpied.com/remarkable-react/</a></small></p>
                     </div>
                 </section>
                 <section>
@@ -353,9 +361,11 @@
                     <div class="fragment">
                         <ul>
                             <li><a href="https://twitter.com/neilvoss/status/473477417101963266">@neilvoss</a>: &ldquo;Polling frame delay for selective features is pretty common in video games&rdquo;</li>
-                            <li>Could use FPS to determine animation complexity</li>
+                            <li>Could use FPS to determine animation complexity?</li>
+                            <!--
                             <li>Fall back to light transitions if framerate struggling</li>
                             <li>Or ramp up as long as framerate still looking good</li>
+                            -->
                         </ul>
                     </div>
                 </section>
