@@ -176,7 +176,7 @@
                     <h2>Top 10 tips</h2>
                 </section>
                 <section>
-                    <h3>Tip 1: It's good to define animations in CSS</h3>
+                    <h3>Tip 1: Define animations in CSS if possible</h3>
                     <!-- E.g. fade out, just need to kick off - no need to cancel or control frame by frame -->
                     <!-- JavaScript can be used to toggle classes -->
                     <!-- Browser can optimise & run without hanging JavaScript -->
@@ -187,15 +187,15 @@
                     <!-- Not an absolute rule: in some cases, highly optimised JavaScript could be faster on some devices -->
                     <div class="fragment">
                         <ul>
-                            <li>Browser can optimise &amp; run separately from JavaScript</li>
-                            <li>When you don't need to control frame by frame</li>
+                            <li>Browser can optimise; create layers, run off main thread</li>
+                            <li>Good for simple things you don't need to control frame by frame</li>
                             <li>E.g. Fade out animation on delete</li>
                         </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">www.html5rocks.com/en/tutorials/speed/high-performance-animations/</a></small></p>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/#toc-imperative-declarative">www.html5rocks.com/en/tutorials/speed/high-performance-animations/#toc-imperative-declarative</a></small></p>
                     </div>
                 </section>
                 <section>
-                    <h4>Real example</h4>
+                    <h4>Example</h4>
                     <pre><code class="css">
 @keyframes slide-in-left1 {
     0% {
@@ -259,15 +259,27 @@
                             <li>Animations in background tabs get paused</li>
                             <li>NB. Shim <a href="http://caniuse.com/#feat=requestanimationframe">may be required</a> for older browsers</li>
                         </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/#toc-raf">www.html5rocks.com/en/tutorials/speed/rendering/#toc-raf</a></small></p>
                     </div>
                 </section>
                 <section>
-                    <h4>Real example</h4>
+                    <h4>Example</h4>
                     <pre><code class="javascript">
-// todo
+function animate() {
+
+    var snowLeft = /* some kind of calculation omitted... */
+
+    // Update transform
+    snowFlake.style.transform = 'translate(' + snowLeft + 'px)';
+
+    // Call animate again once browser's ready for next frame
+    requestAnimationFrame( animate )
+
+}
+
+// Kick off the first time
+animate();
                     </code></pre>
-                    <small>NB. Vendor prefixes omitted for simplicity</small>
                 </section>
                 <section>
                     <h3>Tip 4: For 60 FPS, you have 16ms to prepare each frame</h3>
@@ -318,8 +330,8 @@
                     <div class="fragment">
                         <ul>
                             <li>Doing lots of processing in places like onscroll handlers is a "very common cause of terrible jankiness"</li>
-                            <li>Native developers know not to overload the main UI thread</li> <!-- to keep it free for a responsive UI -->
-                            <li>Web Workers bring threading to JavaScript</li>
+                            <li>Common in native app development to move off from main UI thread</li> <!-- to keep it free for a responsive UI -->
+                            <!--<li>Web Workers bring threading to JavaScript</li>-->
                             <!-- Utilise multiple CPU cores -->
                         </ul>
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/workers/basics/">www.html5rocks.com/en/tutorials/workers/basics/</a></small></p>
