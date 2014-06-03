@@ -356,7 +356,21 @@ player.onfinish = function(e) {
 
             <section data-background="#0ac2d2">
                 <section>
-                    <h3>Tip 1: Define animations in CSS if possible</h3>
+                    <h3>Tip 1: For 60 FPS, you only have 16ms to prepare each frame</h3>
+                    <!-- Make sure your rAF callback doesn't take longer, or else the framerate will drop -->
+                    <div class="fragment">
+                        <ul>
+                            <li>And that's not very long...</li>
+                            <!--
+                            <li>Make sure your rAF callback doesn't take longer, or framerate will drop</li>
+                            <li>Your callback gets passed a "high resolution" timestamp</li>
+                            <li>You can also use performance.now()</li>
+                            -->
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Tip 2: For now, define animations in CSS if possible</h3>
                     <!-- E.g. fade out, just need to kick off - no need to cancel or control frame by frame -->
                     <!-- JavaScript can be used to toggle classes -->
                     <!-- Browser can optimise & run without hanging JavaScript -->
@@ -368,122 +382,51 @@ player.onfinish = function(e) {
                     <div class="fragment">
                         <ul>
                             <li>Browser can optimise; create layers, run off main thread</li>
-                            <li>Good for simple things you don't need to control frame by frame</li>
-                            <li>E.g. Fade out animation on delete</li>
+                            <li>Good for simple things you don't need to control frame by frame (e.g. a fade-out animation)</li>
                         </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/#toc-imperative-declarative">www.html5rocks.com/en/tutorials/speed/high-performance-animations/#toc-imperative-declarative</a></small></p>
                     </div>
                 </section>
                 <section>
-                    <h4>Example</h4>
-                    <pre><code class="css">
-@keyframes slide-in-left1 {
-    0% {
-        transform: translateX(-2000px);
-    }
-    10% {
-        transform: translateX(0);
-    }
-    90% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-2000px);
-    }
-}
-                    </code></pre>
-                    <small>NB. Vendor prefixes omitted for simplicity</small>
+                    <h3>Tip 3: Make sure you don't hammer the UI thread</h3>
+                    <div class="fragment">
+                        <ul>
+                            <li>Avoid performing calculations in input handlers such as onScroll</li>
+                            <li>Use requestAnimationFrame so the browser calls <em>you</em> when <em>it's</em> ready</li>
+                        </ul>
+                    </div>
                 </section>
-
                 <section>
-                    <h3>Tip 2: Stick to: translate, scale, rotate, opacity</h3>
+                    <h3>Tip 4: Stick to: translate, scale, rotate, opacity</h3>
                     <!-- They're the four things a browser can "animate cheaply" -->
                     <!-- "Transition everything else at your own risk" -->
                     <div class="fragment">
                         <ul>
                             <li>The 4 things a browser can "animate cheaply"</li> <!-- because they don't affect document flow -->
                             <li>&ldquo;Transition everything else at your own risk&rdquo;</li>
-                            <li>Translate vs top/left: <a href="http://youtu.be/-62uPWUxgcg">http://youtu.be/-62uPWUxgcg</a></li>
+                            <iframe class="fragment" width="420" height="315" src="//www.youtube.com/embed/-62uPWUxgcg" frameborder="0" allowfullscreen></iframe>
                         </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">www.html5rocks.com/en/tutorials/speed/high-performance-animations/</a></small></p>
-                    </div>
-                </section>
-                <!--
-                <section>
-                    <h4>Real example</h4>
-                    <pre><code class="css">
-@keyframes slide-in-left1 {
-    0% {
-        transform: translateX(-2000px);
-    }
-    10% {
-        transform: translateX(0);
-    }
-    90% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-2000px);
-    }
-}
-                    </code></pre>
-                    <small>NB. Vendor prefixes omitted for simplicity</small>
-                </section>
-                -->
-                <section>
-                    <h3>Tip 3: Use requestAnimationFrame (not setInterval/setTimeout)</h3>
-                    <div class="fragment">
-                        <ul>
-                            <li>Get called when the browser is ready</li>
-                            <li>Helps keep framerate consistent</li>
-                            <li>Animations in background tabs get paused</li>
-                            <li>NB. Shim <a href="http://caniuse.com/#feat=requestanimationframe">may be required</a> for older browsers</li>
-                        </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/#toc-raf">www.html5rocks.com/en/tutorials/speed/rendering/#toc-raf</a></small></p>
-                    </div>
-                </section>
-                <section>
-                    <h4>Example</h4>
-                    <pre><code class="javascript">
-function animate() {
 
-    var snowLeft = /* some kind of calculation omitted... */
-
-    // Update transform
-    snowFlake.style.transform = 'translate(' + snowLeft + 'px)';
-
-    // Call animate again once browser's ready for next frame
-    requestAnimationFrame( animate )
-
-}
-
-// Kick off the first time
-animate();
-                    </code></pre>
-                </section>
-                <section>
-                    <h3>Tip 4: For 60 FPS, you have 16ms to prepare each frame</h3>
-                    <!-- Make sure your rAF callback doesn't take longer, or else the framerate will drop -->
-                    <div class="fragment">
-                        <ul>
-                            <li>Make sure your rAF callback doesn't take longer, or framerate will drop</li>
-                            <li>Your callback gets passed a "high resolution" timestamp</li>
-                            <li>You can also use performance.now()</li>
-                        </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/#toc-raf">www.html5rocks.com/en/tutorials/speed/rendering/#toc-raf</a></small></p>
                     </div>
                 </section>
                 <section>
                     <h3>Tip 5: Test, measure, optimise</h3>
                     <div class="fragment">
                         <ul>
-                            <li>Use <a href="https://github.com/mrdoob/stats.js/">stats.js</a> to measure FPS</li>
-                            <li>Use the Dev Tools Timeline to analyse deeper</li>
+                            <li>Use the Timeline feature in your browser's developer tools</li>
+                            <li>Third-party libs like <a href="https://github.com/mrdoob/stats.js/">stats.js</a> can help too</li>
                             <!-- 'Frames' shows you spikes down in FPS -->
                             <!-- Can analyse specific browser rendering events e.g. 'Layouts' -->
                             <!-- TODO do more research on this -->
                         </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/#toc-framebudget">www.html5rocks.com/en/tutorials/speed/rendering/#toc-framebudget</a></small></p>
+                    </div>
+                </section>
+                <section>
+                    <h3>Tip 6: Batch DOM operations</h3>
+                    <div class="fragment">
+                        <ul>
+                            <li>The DOM is expensive</li>
+                            <li>Frameworks like React and Ractive can handle this for you</li>
+                        </ul>
                     </div>
                 </section>
                 <!--
@@ -501,26 +444,32 @@ animate();
                     </div>
                 </section>
                 -->
+                <!--
                 <section>
                     <h3>Tip 6: Move heavy JavaScript processing into Web Workers</h3>
+                    -->
                     <!-- "Don't do a lot of processing in input handlers! Doing a lot of JS or trying to rearrange -->
                     <!-- the whole page during e.g. an onscroll handler is a very common cause of terrible jankiness" -->
                     <!-- With native iOS development, you do as much as possible away from the main UI thread -->
                     <!-- But with JS, there's only one thread, except if you use a WebWorker... -->
+                <!--
                     <div class="fragment">
                         <ul>
                             <li>Doing lots of processing in places like onscroll handlers is a "very common cause of terrible jankiness"</li>
                             <li>Common in native app development to move off from main UI thread</li> <!-- to keep it free for a responsive UI -->
                             <!--<li>Web Workers bring threading to JavaScript</li>-->
                             <!-- Utilise multiple CPU cores -->
+                <!--
                         </ul>
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/workers/basics/">www.html5rocks.com/en/tutorials/workers/basics/</a></small></p>
                     </div>
                 </section>
                 <section>
                     <h3>Tip 7: ...Or chunk it down &amp; move into rAF callback</h3>
+                    -->
                     <!-- So you can ensure that you perform the calculation within the time that -->
                     <!-- the browser is waiting ready for a new frame, and not interrupt it -->
+                <!--
                     <div class="fragment">
                         <ul>
                             <li>Do processing when you won't interrupt animation</li>
@@ -530,6 +479,7 @@ animate();
                 </section>
                 <section>
                     <h3>Tip 8: Use a <em>virtual DOM</em> system like React.js</h3>
+                    -->
                     <!-- StaticContainer can pause updates to components until their animation completes -->
                     <!-- "This is a great feature of React since it'll prevent you from accidentally messing up
                     <!-- the animation if you need to do more work in a child component" -->
@@ -542,14 +492,14 @@ animate();
                     <!-- "one way data binding" -->
                     <!-- "Javascript is so much faster than the DOM" -->
                     <!-- Also because UI built in JS, allows server-side rendering for fast initial page views -->
+                <!--
                     <div class="fragment">
                         <ul>
                             <li>Only applies minimal set of changes to DOM</li>
                             <li>Avoid unnecessary reflows &amp; repaints</li>
-                            <li>Can pause updates to components until their animation completes</li> <!--Prevent you from accidentally messing up animation-->
+                            <li>Can pause updates to components until their animation completes</li>                --> <!--Prevent you from accidentally messing up animation-->
+                <!--
                         </ul>
-                        <!--<p><small><a href="https://gist.github.com/petehunt/7618353#comment-957122">gist.github.com/petehunt/7618353#comment-957122</a></small></p>-->
-                        <p><small><a href="http://www.phpied.com/remarkable-react/">http://www.phpied.com/remarkable-react/</a></small></p>
                     </div>
                 </section>
                 <section>
@@ -558,15 +508,22 @@ animate();
                         <ul>
                             <li><a href="https://twitter.com/neilvoss/status/473477417101963266">@neilvoss</a>: &ldquo;Polling frame delay for selective features is pretty common in video games&rdquo;</li>
                             <li>Could use FPS to determine animation complexity?</li>
+                            -->
                             <!--
                             <li>Fall back to light transitions if framerate struggling</li>
                             <li>Or ramp up as long as framerate still looking good</li>
                             -->
+                <!--
                         </ul>
                     </div>
                 </section>
+                -->
                 <section>
-                    <h3>Tip 10: When available, use the Web Animations API...</h3>
+                    <h3>For more info:</h3>
+                    <ul>
+                        <li><a href="http://bit.ly/html5rocks-high-perf-apps">bit.ly/html5rocks-high-perf-apps</a></li>
+                        <li><a href="http://bit.ly/html5rocks-jank-busting">bit.ly/html5rocks-jank-busting</a></li>
+                    </ul>
                 </section>
             </section>
 
