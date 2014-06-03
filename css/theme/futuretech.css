@@ -231,7 +231,7 @@ body {
   .reveal .tech-contents li {
     line-height: 1.5em; }
 .reveal .further-reading {
-  font-size: 0.9em; }
+  font-size: 0.85em; }
 .reveal .contents {
   margin-top: 1em;
   font-size: 1.5em; }
@@ -243,6 +243,8 @@ body {
   left: 165px;
   z-index: 1;
   pointer-events: none; }
+.reveal .more-info {
+  font-size: 1.5em; }
 
 @-webkit-keyframes slide-in-left1 {
   0% {

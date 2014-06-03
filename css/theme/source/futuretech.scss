@@ -191,7 +191,7 @@ $selectionBackgroundColor: #134674;
   }
 
   .further-reading {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 
   .contents {
@@ -211,6 +211,10 @@ $selectionBackgroundColor: #134674;
     left: 165px;
     z-index: 1;
     pointer-events: none;
+  }
+
+  .more-info {
+    font-size: 1.5em;
   }
 
 }

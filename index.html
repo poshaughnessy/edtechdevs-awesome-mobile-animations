@@ -288,7 +288,7 @@ player.onfinish = function(e) {
                     <small><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">bit.ly/elementanimate</a></small>
                 </section>
                 <section>
-                    <h3>More info at: <a href="http://bit.ly/html5rocks-webanimations">bit.ly/html5rocks-webanimations</a></h3>
+                    <h3>More info at: <br/><a href="http://bit.ly/html5rocks-webanimations">bit.ly/html5rocks-webanimations</a></h3>
                 </section>
             </section>
 
@@ -301,7 +301,7 @@ player.onfinish = function(e) {
                     <!-- Make sure your rAF callback doesn't take longer, or else the framerate will drop -->
                     <div class="fragment">
                         <ul>
-                            <li>Really not very long...</li>
+                            <li>It's not very long!</li>
                             <!--
                             <li>Make sure your rAF callback doesn't take longer, or framerate will drop</li>
                             <li>Your callback gets passed a "high resolution" timestamp</li>
@@ -311,7 +311,20 @@ player.onfinish = function(e) {
                     </div>
                 </section>
                 <section>
-                    <h3>Tip 2: For now, define animations in CSS if possible</h3>
+                    <h3>Tip 2: Test, measure, optimise</h3>
+                    <div class="fragment">
+                        <ul>
+                            <li>Use the Timeline feature in your browser's developer tools</li>
+                            <li>Third-party libs like <a href="https://github.com/mrdoob/stats.js/">stats.js</a> can help too</li>
+                            <!-- 'Frames' shows you spikes down in FPS -->
+                            <!-- Can analyse specific browser rendering events e.g. 'Layouts' -->
+                            <!-- TODO do more research on this -->
+                            <img src="img/devtoolstimeline.png" alt="Timeline frames view" width="80%"/>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Tip 3: For now, define animations in CSS if possible</h3>
                     <!-- E.g. fade out, just need to kick off - no need to cancel or control frame by frame -->
                     <!-- JavaScript can be used to toggle classes -->
                     <!-- Browser can optimise & run without hanging JavaScript -->
@@ -328,38 +341,24 @@ player.onfinish = function(e) {
                     </div>
                 </section>
                 <section>
-                    <h3>Tip 3: Make sure you don't hammer the UI thread</h3>
+                    <h3>Tip 4: Make sure you don't hammer the UI thread</h3>
                     <div class="fragment">
                         <ul>
-                            <li>Avoid performing calculations in input handlers such as onScroll</li>
+                            <li>Avoid doing work in input handlers such as onscroll</li>
                             <li>Use requestAnimationFrame so the browser calls <em>you</em> when <em>it's</em> ready</li>
                             <li>If you need to do a lot of processing, consider chunking it down or using a Web Worker</li>
                         </ul>
                     </div>
                 </section>
                 <section>
-                    <h3>Tip 4: Stick to: translate, scale, rotate, opacity</h3>
+                    <h3>Tip 5: Stick to: translate, scale, rotate, opacity</h3>
                     <!-- They're the four things a browser can "animate cheaply" -->
                     <!-- "Transition everything else at your own risk" -->
                     <div class="fragment">
                         <ul>
                             <li>The 4 things a browser can "animate cheaply"</li> <!-- because they don't affect document flow -->
-                            <li>&ldquo;Transition everything else at your own risk&rdquo;</li>
-                            <iframe class="fragment" width="420" height="315" src="//www.youtube.com/embed/-62uPWUxgcg" frameborder="0" allowfullscreen></iframe>
                         </ul>
-
-                    </div>
-                </section>
-                <section>
-                    <h3>Tip 5: Test, measure, optimise</h3>
-                    <div class="fragment">
-                        <ul>
-                            <li>Use the Timeline feature in your browser's developer tools</li>
-                            <li>Third-party libs like <a href="https://github.com/mrdoob/stats.js/">stats.js</a> can help too</li>
-                            <!-- 'Frames' shows you spikes down in FPS -->
-                            <!-- Can analyse specific browser rendering events e.g. 'Layouts' -->
-                            <!-- TODO do more research on this -->
-                        </ul>
+                        <iframe width="600px" height="450px" src="//www.youtube.com/embed/-62uPWUxgcg" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </section>
                 <section>
@@ -369,100 +368,13 @@ player.onfinish = function(e) {
                             <li>The DOM is expensive</li>
                             <li>Frameworks like React and Ractive can handle this for you</li>
                         </ul>
+                        <img src="img/virtual-dom.png" alt="Virtual DOM" width="80%"/>
+                        <p><small>By <a href="http://slides.com/w33ble/understanding-react#/">Joe Fleming</a></small></p>
                     </div>
                 </section>
-                <!--
-                <section>
-                    <h3>Tip 6: Don't do a lot of processing in input handlers, e.g. onscroll handler</h3>
-                    -->
-                    <!-- "Don't do a lot of processing in input handlers! Doing a lot of JS or trying to rearrange -->
-                    <!-- the whole page during e.g. an onscroll handler is a very common cause of terrible jankiness" -->
-                    <!--
-                    <div class="fragment">
-                        <ul>
-                            <li>"A very common cause of terrible jankiness"</li>
-                        </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
-                    </div>
-                </section>
-                -->
-                <!--
-                <section>
-                    <h3>Tip 6: Move heavy JavaScript processing into Web Workers</h3>
-                    -->
-                    <!-- "Don't do a lot of processing in input handlers! Doing a lot of JS or trying to rearrange -->
-                    <!-- the whole page during e.g. an onscroll handler is a very common cause of terrible jankiness" -->
-                    <!-- With native iOS development, you do as much as possible away from the main UI thread -->
-                    <!-- But with JS, there's only one thread, except if you use a WebWorker... -->
-                <!--
-                    <div class="fragment">
-                        <ul>
-                            <li>Doing lots of processing in places like onscroll handlers is a "very common cause of terrible jankiness"</li>
-                            <li>Common in native app development to move off from main UI thread</li> <!-- to keep it free for a responsive UI -->
-                            <!--<li>Web Workers bring threading to JavaScript</li>-->
-                            <!-- Utilise multiple CPU cores -->
-                <!--
-                        </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/workers/basics/">www.html5rocks.com/en/tutorials/workers/basics/</a></small></p>
-                    </div>
-                </section>
-                <section>
-                    <h3>Tip 7: ...Or chunk it down &amp; move into rAF callback</h3>
-                    -->
-                    <!-- So you can ensure that you perform the calculation within the time that -->
-                    <!-- the browser is waiting ready for a new frame, and not interrupt it -->
-                <!--
-                    <div class="fragment">
-                        <ul>
-                            <li>Do processing when you won't interrupt animation</li>
-                        </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
-                    </div>
-                </section>
-                <section>
-                    <h3>Tip 8: Use a <em>virtual DOM</em> system like React.js</h3>
-                    -->
-                    <!-- StaticContainer can pause updates to components until their animation completes -->
-                    <!-- "This is a great feature of React since it'll prevent you from accidentally messing up
-                    <!-- the animation if you need to do more work in a child component" -->
-                    <!-- Just *reading* from the DOM can cause (or bring forward) recalculation -->
-                    <!-- A common best practise is to batch DOM operations -->
-                    <!-- React also uses requestAnimationFrame -->
-                    <!-- Ractive is another example -->
-                    <!-- React's "declarative interface allows simply writing how the document tree should look -->
-                    <!-- and it will intelligently determine which changes need to be made -->
-                    <!-- "one way data binding" -->
-                    <!-- "Javascript is so much faster than the DOM" -->
-                    <!-- Also because UI built in JS, allows server-side rendering for fast initial page views -->
-                <!--
-                    <div class="fragment">
-                        <ul>
-                            <li>Only applies minimal set of changes to DOM</li>
-                            <li>Avoid unnecessary reflows &amp; repaints</li>
-                            <li>Can pause updates to components until their animation completes</li>                --> <!--Prevent you from accidentally messing up animation-->
-                <!--
-                        </ul>
-                    </div>
-                </section>
-                <section>
-                    <h3>Tip 9: Progressively enhanced animations based on frame rate?</h3>
-                    <div class="fragment">
-                        <ul>
-                            <li><a href="https://twitter.com/neilvoss/status/473477417101963266">@neilvoss</a>: &ldquo;Polling frame delay for selective features is pretty common in video games&rdquo;</li>
-                            <li>Could use FPS to determine animation complexity?</li>
-                            -->
-                            <!--
-                            <li>Fall back to light transitions if framerate struggling</li>
-                            <li>Or ramp up as long as framerate still looking good</li>
-                            -->
-                <!--
-                        </ul>
-                    </div>
-                </section>
-                -->
                 <section>
                     <h3>For more info:</h3>
-                    <ul>
+                    <ul class="more-info">
                         <li><a href="http://bit.ly/html5rocks-high-perf-apps">bit.ly/html5rocks-high-perf-apps</a></li>
                         <li><a href="http://bit.ly/html5rocks-jank-busting">bit.ly/html5rocks-jank-busting</a></li>
                     </ul>
@@ -503,28 +415,12 @@ player.onfinish = function(e) {
                     <!--<small><a href="http://www.raizlabs.com/2012/09/great-animations-great-apps/">www.raizlabs.com/2012/09/great-animations-great-apps/</a></small>-->
                 </section>
                 <section class="bad-example">
-                    <div class="demo-boring">
-                        <div class="container">
-
-                            <div class="header"><a href="#" class="menu-toggle"></a> <p>Boring App</p></div>
-
-                            <p>Press the menu button!</p>
-
-                            <div class="menu">
-                                <ul>
-                                    <li>Menu</li>
-                                    <li>With</li>
-                                    <li>Dull</li>
-                                    <li>Transition</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <img class="banned" src="img/banned.png" alt="Banned symbol"/>
+                    <h4>So ditch the boring animations.</h4>
+                    <img src="img/boring-animation-app.png" alt="Boring animation app" width="50%"/>
                 </section>
                 <section>
-                    <h3>Make it fluid</h3>
-                    <h3 class="fragment">Make it <em>awesome</em></h3>
+                    <h3>And make it fluid.</h3>
+                    <h3 class="fragment">Make it <em>awesome</em>.</h3>
                 </section>
                 <!--
                 <section>
