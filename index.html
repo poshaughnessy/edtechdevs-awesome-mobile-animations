@@ -237,10 +237,13 @@
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
                     </div>
                 </section>
+                <!--
                 <section>
-                    <h3>Tip 2: Don't do a lot of processing in input handlers, e.g. onscroll handler</h3>
+                    <h3>Tip 6: Don't do a lot of processing in input handlers, e.g. onscroll handler</h3>
+                    -->
                     <!-- "Don't do a lot of processing in input handlers! Doing a lot of JS or trying to rearrange -->
                     <!-- the whole page during e.g. an onscroll handler is a very common cause of terrible jankiness" -->
+                    <!--
                     <div class="fragment">
                         <ul>
                             <li>"A very common cause of terrible jankiness"</li>
@@ -248,12 +251,16 @@
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
                     </div>
                 </section>
+                -->
                 <section>
-                    <h3>Tip 6: Move heavy JavaScript calculations into Web Workers</h3>
+                    <h3>Tip 6: Move heavy JavaScript processing into Web Workers</h3>
+                    <!-- "Don't do a lot of processing in input handlers! Doing a lot of JS or trying to rearrange -->
+                    <!-- the whole page during e.g. an onscroll handler is a very common cause of terrible jankiness" -->
                     <!-- With native iOS development, you do as much as possible away from the main UI thread -->
                     <!-- But with JS, there's only one thread, except if you use a WebWorker... -->
                     <div class="fragment">
                         <ul>
+                            <li>Doing lots of processing in places like onscroll handlers is a "very common cause of terrible jankiness"</li>
                             <li>Native developers know not to overload the main UI thread</li> <!-- to keep it free for a responsive UI -->
                             <li>Web Workers bring threading to JavaScript</li>
                             <!-- Utilise multiple CPU cores -->
@@ -371,18 +378,18 @@ player.onfinish = function(e) {
                     <h2>Canvas</h2>
                 </section>
                 <section>
+                    <video width="45%" controls>
+                        <source src="videos/knoggins.mp4" type="video/mp4;"/>
+                        <!--<source src="videos/knoggins.webm" type="video/webm;"/>-->
+                    </video>
+                    <p><small>Knoggins (hackathon app)</small></p>
+                </section>
+                <section>
                     <video width="80%" controls>
                         <source src="videos/run-pixie-run-ios.mp4" type="video/mp4;"/>
                         <!--<source src="videos/run-pixie-run-ios.webm" type="video/webm;"/>-->
                     </video>
                     <p><small><a href="http://www.goodboydigital.com/runpixierun/">www.goodboydigital.com/runpixierun/</a> (Pixi.js)</small></p>
-                </section>
-                <section>
-                    <video controls>
-                        <source src="videos/knoggins.mp4" type="video/mp4;"/>
-                        <!--<source src="videos/knoggins.webm" type="video/webm;"/>-->
-                    </video>
-                    <p><small>Knoggins (hackathon app)</small></p>
                 </section>
                 <!--
                 <section>
@@ -573,7 +580,7 @@ player.onfinish = function(e) {
             </section>
             -->
 
-            <section data-background="#54e3d0">
+            <section data-background="#60c7f7">
                 <section>
                     <h2>&ldquo;Great animations <br>make great apps&rdquo;</h2>
                     <small><a href="http://www.raizlabs.com/2012/09/great-animations-great-apps/">www.raizlabs.com/2012/09/great-animations-great-apps/</a></small>
@@ -634,7 +641,7 @@ player.onfinish = function(e) {
                 <h4>@poshaughnessy</h4>
             </section>
 
-            <section data-background="#60c7f7">
+            <section data-background="#7bb7fa">
                 <h2>Further reading</h2>
                 <ul class="further-reading">
                     <li><a href="http://capptivate.co/category/patterns/transitions/">Capptivate.co UI transition patterns</a></li>
