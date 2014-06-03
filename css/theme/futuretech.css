@@ -1,9 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
 /**
  * Pearson Future Tech theme for reveal.js
  *
  * Based on Sky theme, copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
 .reveal a:not(.image) {
   line-height: 1.3em; }
 
@@ -220,6 +220,10 @@ body {
   color: #fb611e; }
 .reveal section.title h1 {
   margin-bottom: 80px; }
+.reveal .skeuomorphism {
+  float: right;
+  width: 25%;
+  padding-left: 10px; }
 .reveal img.bunny {
   margin-top: 1em; }
 .reveal .tech-contents {
@@ -228,12 +232,17 @@ body {
     line-height: 1.5em; }
 .reveal .further-reading {
   font-size: 0.9em; }
-.reveal .recap {
-  font-size: 1.6em; }
-  .reveal .recap li {
+.reveal .contents {
+  margin-top: 1em;
+  font-size: 1.5em; }
+  .reveal .contents li {
     margin-bottom: 1em; }
-.reveal .bad-example h4 {
-  margin-top: -30px; }
+.reveal .bad-example .banned {
+  position: absolute;
+  top: 0;
+  left: 165px;
+  z-index: 1;
+  pointer-events: none; }
 
 @-webkit-keyframes slide-in-left1 {
   0% {
@@ -438,7 +447,7 @@ body {
   background: url(/img/iphone-frame-portrait.png) top left no-repeat;
   width: 360px;
   height: 710px;
-  margin: 0 auto; }
+  margin: -20px auto 0 auto; }
   .reveal .demo-boring .container {
     border: 1px solid #666;
     background-color: #fff;
@@ -448,20 +457,41 @@ body {
     top: 115px;
     left: 20px;
     overflow: hidden; }
+    .reveal .demo-boring .container .header {
+      position: relative;
+      background-color: #ccc;
+      height: 40px; }
+      .reveal .demo-boring .container .header p {
+        padding: 2px 0; }
+      .reveal .demo-boring .container .header a {
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        left: 5px;
+        top: 2px;
+        background: url(/img/icon-menu-32.png) top left no-repeat; }
     .reveal .demo-boring .container p {
       color: #333;
       font-size: 0.8em;
       padding: 1em; }
-  .reveal .demo-boring .moveme {
-    background-color: #4a78ab;
-    height: 600px;
+  .reveal .demo-boring .menu {
+    background-color: #666;
+    height: 560px;
     width: 320px;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -320px;
+    top: 40px;
+    /* NB. Deliberately using left rather than translate to make a point */
+    transition: left 0.5s linear;
+    -webkit-transition: left 0.5s linear;
+    /*
     -webkit-animation: slide-out-and-in 1.5s linear infinite;
-    animation: slide-out-and-in 1.5s linear infinite; }
-    .reveal .demo-boring .moveme ul {
+    animation:         slide-out-and-in 1.5s linear infinite;
+    */ }
+    .reveal .demo-boring .menu.reveal {
+      left: 0; }
+    .reveal .demo-boring .menu ul {
       font-size: 0.8em;
       color: #ccc;
       margin-top: 1em; }

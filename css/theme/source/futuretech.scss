@@ -173,6 +173,12 @@ $selectionBackgroundColor: #134674;
     margin-bottom: 80px;
   }
 
+  .skeuomorphism {
+    float: right;
+    width: 25%;
+    padding-left: 10px;
+  }
+
   img.bunny {
     margin-top: 1em;
   }
@@ -188,9 +194,10 @@ $selectionBackgroundColor: #134674;
     font-size: 0.9em;
   }
 
-  .recap {
+  .contents {
 
-    font-size: 1.6em;
+    margin-top: 1em;
+    font-size: 1.5em;
 
     li {
       margin-bottom: 1em;
@@ -198,8 +205,12 @@ $selectionBackgroundColor: #134674;
 
   }
 
-  .bad-example h4 {
-    margin-top: -30px;
+  .bad-example .banned {
+    position: absolute;
+    top: 0;
+    left: 165px;
+    z-index: 1;
+    pointer-events: none;
   }
 
 }
@@ -438,7 +449,7 @@ $selectionBackgroundColor: #134674;
     background: url(/img/iphone-frame-portrait.png) top left no-repeat;
     width: 360px;
     height: 710px;
-    margin: 0 auto;
+    margin: -20px auto 0 auto;
 
     .container {
       border: 1px solid #666;
@@ -450,6 +461,27 @@ $selectionBackgroundColor: #134674;
       left: 20px;
       overflow: hidden;
 
+      .header {
+
+        position: relative;
+        background-color: #ccc;
+        height: 40px;
+
+        p {
+          padding: 2px 0;
+        }
+
+        a {
+          display: block;
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          left: 5px;
+          top: 2px;
+          background: url(/img/icon-menu-32.png) top left no-repeat;
+        }
+      }
+
       p {
         color: #333;
         font-size: 0.8em;
@@ -458,15 +490,25 @@ $selectionBackgroundColor: #134674;
 
     }
 
-    .moveme {
-      background-color: #4a78ab;
-      height: 600px;
+    .menu {
+      background-color: #666;
+      height: 560px;
       width: 320px;
       position: absolute;
-      left: 0;
-      top: 0;
+      left: -320px;
+      top: 40px;
+
+      /* NB. Deliberately using left rather than translate to make a point */
+      transition: left 0.5s linear;
+      -webkit-transition: left 0.5s linear;
+
+      &.reveal {
+        left: 0;
+      }
+      /*
       -webkit-animation: slide-out-and-in 1.5s linear infinite;
       animation:         slide-out-and-in 1.5s linear infinite;
+      */
 
 
       ul {
