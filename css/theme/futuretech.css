@@ -390,6 +390,10 @@ body {
     line-height: 1.5em; }
 .reveal .further-reading {
   font-size: 0.9em; }
+.reveal .recap {
+  font-size: 1.6em; }
+  .reveal .recap li {
+    margin-bottom: 1em; }
 .reveal #demo-cssanimation {
   transition-property: transform;
   -webkit-transition-property: transform;

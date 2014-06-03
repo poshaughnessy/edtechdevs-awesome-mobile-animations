@@ -37,7 +37,7 @@
                     <h1 class="three">Animations</h1>
                 </div>
                 <h4>Peter O'Shaughnessy</h4>
-                <p><small><a href="http://awesome-mobile-animations.herokuapp.com/">awesome-mobile-animations.herokuapp.com</a> (warning: big)</small></p>
+                <!--<p><small><a href="http://awesome-mobile-animations.herokuapp.com/">awesome-mobile-animations.herokuapp.com</a> (warning: 30MB+!)</small></p>-->
             </section>
 
             <section data-background="#7bb7fa">
@@ -129,7 +129,7 @@
 
             <!-- TODO introduce CSS animations, transitions... with simple examples first? -->
 
-            <section data-background="#7bb7fa">
+            <section data-background="#0ac2d2">
                 <section>
                     <h2>CSS3D</h2>
                 </section>
@@ -169,7 +169,7 @@
                 -->
             </section>
 
-            <section data-background="#0ac2d2">
+            <section data-background="#7bb7fa">
                 <section>
                     <h2>Top 10 tips</h2>
                 </section>
@@ -438,11 +438,20 @@ player.onfinish = function(e) {
                     </ul>
                 </section>
                 <section>
-                    <h3>Tip 11: Use WebGL! (With fallbacks)</h3>
+                    <h3>Tip 11: Use WebGL for game-like UIs</h3>
                     <div class="fragment">
                         <ul>
-                            <li><a href="https://github.com/mrdoob/three.js/blob/master/examples/js/Detector.js">three.js Detector.js</a></li>
-                            <li><a href="http://www.goodboydigital.com/pixijs/docs/classes/autoDetectRenderer.html">Pixi.js autoDetectRenderer</a></li>
+                            <li>I recommend <a href="http://www.pixijs.com/">Pixi.js</a> for 2D</li>
+                            <li>And <a href="http://threejs.org">three.js</a> for 3D</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Tip 12: Use fallbacks if WebGL not available</h3>
+                    <div class="fragment">
+                        <ul>
+                            <li>three.js <a href="https://github.com/mrdoob/three.js/blob/master/examples/js/Detector.js">Detector.js</a></li>
+                            <li>Pixi.js <a href="http://www.goodboydigital.com/pixijs/docs/classes/autoDetectRenderer.html">autoDetectRenderer</a></li>
                         </ul>
                     </div>
                 </section>
@@ -571,7 +580,7 @@ player.onfinish = function(e) {
                 </section>
                 <section>
                     <!-- Recap... -->
-                    <ul>
+                    <ul class="recap">
                         <li>CSS</li>
                         <li>Canvas</li>
                         <li>WebGL</li>
@@ -611,7 +620,7 @@ player.onfinish = function(e) {
 
                     <p><small><a href="http://blogs.infobae.com/like/2013/08/14/los-10-futbolistas-mas-altos-del-mundo/">blogs.infobae.com</a></small></p>
 
-                    <h3>Don't be a robot. <span class="fragment">Be fluid.</span></h3>
+                    <h3><span class="fragment">Don't be a robot.</span> <span class="fragment">Be fluid.</span></h3>
 
                 </section>
             </section>
