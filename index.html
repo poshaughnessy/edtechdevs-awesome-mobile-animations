@@ -176,13 +176,15 @@
                     <h2>Top 10 tips</h2>
                 </section>
                 <section>
-                    <h3>Tip 1: Where possible, define animations in CSS</h3>
+                    <h3>Tip 1: It's good to define animations in CSS</h3>
                     <!-- E.g. fade out, just need to kick off - no need to cancel or control frame by frame -->
                     <!-- JavaScript can be used to toggle classes -->
                     <!-- Browser can optimise & run without hanging JavaScript -->
+                    <!-- Runs on GPU -->
                     <!-- "On Chrome for Android in particular (and other browsers are working on similar features) -->
                     <!-- CSS animations have the very desirable property that the browser can often run them even
                     <!-- if JavaScript is running" -->
+                    <!-- Not an absolute rule: in some cases, highly optimised JavaScript could be faster on some devices -->
                     <div class="fragment">
                         <ul>
                             <li>Browser can optimise &amp; run separately from JavaScript</li>
@@ -219,7 +221,7 @@
                     <!-- "Transition everything else at your own risk" -->
                     <div class="fragment">
                         <ul>
-                            <li>The 4 things a browser can "animate cheaply"</li>
+                            <li>The 4 things a browser can "animate cheaply"</li> <!-- because they don't affect document flow -->
                             <li>&ldquo;Transition everything else at your own risk&rdquo;</li>
                             <li>Translate vs top/left: <a href="http://youtu.be/-62uPWUxgcg">http://youtu.be/-62uPWUxgcg</a></li>
                         </ul>
@@ -276,18 +278,20 @@
                             <li>Your callback gets passed a "high resolution" timestamp</li>
                             <li>You can also use performance.now()</li>
                         </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/#toc-raf">www.html5rocks.com/en/tutorials/speed/rendering/#toc-raf</a></small></p>
                     </div>
                 </section>
                 <section>
-                    <h3>Tip 5: Measure and optimise...</h3>
+                    <h3>Tip 5: Test, measure, optimise</h3>
                     <div class="fragment">
                         <ul>
                             <li>Use <a href="https://github.com/mrdoob/stats.js/">stats.js</a> to measure FPS</li>
                             <li>Use the Dev Tools Timeline to analyse deeper</li>
+                            <!-- 'Frames' shows you spikes down in FPS -->
+                            <!-- Can analyse specific browser rendering events e.g. 'Layouts' -->
                             <!-- TODO do more research on this -->
                         </ul>
-                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
+                        <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/#toc-framebudget">www.html5rocks.com/en/tutorials/speed/rendering/#toc-framebudget</a></small></p>
                     </div>
                 </section>
                 <!--
