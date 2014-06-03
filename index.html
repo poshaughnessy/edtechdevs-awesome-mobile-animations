@@ -193,6 +193,27 @@
                     </div>
                 </section>
                 <section>
+                    <h4>Real example</h4>
+                    <pre><code class="css">
+@keyframes slide-in-left1 {
+    0% {
+        transform: translateX(-2000px);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+                    </code></pre>
+                    <small>NB. Vendor prefixes omitted for simplicity</small>
+                </section>
+
+                <section>
                     <h3>Tip 2: Stick to: translate, scale, rotate, opacity</h3>
                     <!-- They're the four things a browser can "animate cheaply" -->
                     <!-- "Transition everything else at your own risk" -->
@@ -205,6 +226,7 @@
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">www.html5rocks.com/en/tutorials/speed/high-performance-animations/</a></small></p>
                     </div>
                 </section>
+                <!--
                 <section>
                     <h4>Real example</h4>
                     <pre><code class="css">
@@ -225,6 +247,7 @@
                     </code></pre>
                     <small>NB. Vendor prefixes omitted for simplicity</small>
                 </section>
+                -->
                 <section>
                     <h3>Tip 3: Use requestAnimationFrame (not setInterval/setTimeout)</h3>
                     <div class="fragment">
@@ -236,6 +259,13 @@
                         </ul>
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
                     </div>
+                </section>
+                <section>
+                    <h4>Real example</h4>
+                    <pre><code class="javascript">
+// todo
+                    </code></pre>
+                    <small>NB. Vendor prefixes omitted for simplicity</small>
                 </section>
                 <section>
                     <h3>Tip 4: For 60 FPS, you have 16ms to prepare each frame</h3>
@@ -255,6 +285,7 @@
                         <ul>
                             <li>Use <a href="https://github.com/mrdoob/stats.js/">stats.js</a> to measure FPS</li>
                             <li>Use the Dev Tools Timeline to analyse deeper</li>
+                            <!-- TODO do more research on this -->
                         </ul>
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
                     </div>
@@ -296,7 +327,7 @@
                     <!-- the browser is waiting ready for a new frame, and not interrupt it -->
                     <div class="fragment">
                         <ul>
-                            <li>Help ensure you don't delay frame rendering</li>
+                            <li>Do processing when you won't interrupt animation</li>
                         </ul>
                         <p><small><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">www.html5rocks.com/en/tutorials/speed/rendering/</a></small></p>
                     </div>
@@ -308,9 +339,12 @@
                     <!-- the animation if you need to do more work in a child component" -->
                     <div class="fragment">
                         <ul>
+                            <li>Diffs render results &amp; generates minimal set of changes to apply to DOM</li>
+                            <li>Avoid unnecessary document reflows</li>
                             <li>Can pause updates to components until their animation completes</li>
                             <li>&ldquo;Prevent you from accidentally messing up animation&rdquo;</li>
                         </ul>
+                        <!-- TODO do more research on this -->
                         <p><small><a href="https://gist.github.com/petehunt/7618353#comment-957122">gist.github.com/petehunt/7618353#comment-957122</a></small></p>
                     </div>
                 </section>
@@ -413,11 +447,6 @@ player.onfinish = function(e) {
                     </video>
                     <p><small><a href="http://www.goodboydigital.com/runpixierun/">www.goodboydigital.com/runpixierun/</a> (Pixi.js)</small></p>
                 </section>
-                <!--
-                <section>
-                    <h3>Best for game-like UIs when WebGL is unavailable</h3>
-                </section>
-                -->
             </section>
 
             <section data-background="#54e3d0">
@@ -514,94 +543,6 @@ player.onfinish = function(e) {
             </section>
             -->
 
-<!--
-            <section data-background="#60c7f7">
-                <h2>How?</h2>
-            </section>
-
-            <section data-background="#0ac2d2">
-                <h2>CSS</h2>
-                <ul>
-                -->
-                    <!-- TODO useful links - places to start -->
-                <!--
-                    <li><a href="http://michaelobriena.github.io/blog/2013/09/28/understanding-the-threejs-css3drenderer/">Three.js CSS3DRenderer</a></li>
-                </ul>
-                -->
-                <!-- TODO: turn each of these into an example? -->
-                <!--
-                    <h3>Transforms</h3>
-                    <ul>
-                        <li>translate, translate3d</li>
-                        <li>scale, scale3d</li>
-                        <li>rotate, rotate3d</li>
-                        <li>matrix, matrix3d</li>
-                        <li>skew</li>
-                        <li>perspective</li>
-                    </ul>
-                </section>
-                -->
-<!--
-            </section>
-
-            <section data-background="#7bb7fa">
-                <h2>Canvas</h2>
-                <ul>
-                -->
-                    <!-- TODO useful links - places to start -->
-                <!--
-                    <li>Three.js CanvasRenderer</li>
-                </ul>
-            </section>
-
-            <section data-background="#60d7a9">
-                <h2>WebGL</h2>
-                <ul>
-                -->
-                    <!-- TODO useful links - places to start -->
-                <!--
-                    <li></li>
-                </ul>
-            </section>
--->
-
-
-            <!--
-            <section data-background="#60c7f7">
-                <h2>Which?</h2>
-            </section>
-
-            <section data-background="#0ac2d2">
-                <h2>CSS</h2>
-                <h3>Best for (small numbers of) DOM elements</h3>
-                <p><small>See <a href="http://speedy-web-uis.herokuapp.com/">speedy-web-uis.herokuapp.com</a></small></p>
-            </section>
-
-            <section data-background="#7bb7fa">
-                <h2>Canvas</h2>
-                <h3>Best for game-like UIs when WebGL is unavailable</h3>
-            </section>
-
-            <section data-background="#60d7a9">
-                <section>
-                    <h2>WebGL</h2>
-                    <h3>Best for performance when available</h3>
-                    <ul>
-                        <li>Chrome for Android <span class="tick">✓</span></li>
-                        <li>Firefox for Android <span class="tick">✓</span></li>
-                        <li>Opera Mobile <span class="tick">✓</span></li>
-                        <li>iOS Safari <span class="cross">✗</span></li>
-                    </ul>
-                </section>
-                <section>
-                    <blockquote>
-                        <p>&ldquo;The final domino is teetering, about to fall. WebGL on Safari is coming&rdquo;</p>
-                    </blockquote>
-                    <p><small><a href="http://blog.playcanvas.com/apple-embraces-webgl/">blog.playcanvas.com/apple-embraces-webgl</a></small></p>
-                </section>
-            </section>
-            -->
-
             <section data-background="#60c7f7">
                 <section>
                     <h2>&ldquo;Great animations <br>make great apps&rdquo;</h2>
@@ -615,15 +556,6 @@ player.onfinish = function(e) {
                         <li>WebGL</li>
                     </ul>
                 </section>
-                <!--
-                <section>
-                    <h3>Fluid animations for Mobile Web?</h3>
-                    <div class="fragment">
-                        <img src="img/yeswecan.jpg" width="700"/>
-                        <p><small><a href="http://www.flickr.com/photos/joecrimmings/2238699461/">www.flickr.com/photos/joecrimmings/2238699461</a></small></p>
-                    </div>
-                </section>
-                -->
                 <section class="bad-example">
                     <!-- So take a look back at your mobile web apps, and if the animation looks like... -->
                     <h3>So if your animations look like:</h3>
@@ -646,11 +578,13 @@ player.onfinish = function(e) {
                 </section>
                 <section>
                     <!-- Then remember: -->
+                    <h4>Remember...</h4>
+
                     <img src="img/nocrouchrobot.png" alt="No Peter Crouch robot" width="450"/>
 
                     <p><small><a href="http://blogs.infobae.com/like/2013/08/14/los-10-futbolistas-mas-altos-del-mundo/">blogs.infobae.com</a></small></p>
 
-                    <h3>Remember: <span class="fragment">Don't be a robot.</span> <span class="fragment">Be fluid.</span></h3>
+                    <h3><span class="fragment">Don't be rigid.</span> <span class="fragment">Be fluid.</span></h3>
                     <!--<h4 class="fragment">Make your mobile animations <em>awesome</em>.</h4>-->
 
                 </section>
@@ -674,6 +608,7 @@ player.onfinish = function(e) {
                     <!--<li><a href="http://www.html5rocks.com/en/tutorials/speed/animations/">"Leaner, Meaner, Faster Animations with requestAnimationFrame"</a> (HTML5Rocks)</li>-->
                     <li><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">High Performance Animations</a> (HTML5Rocks)</li>
                     <li><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">Jank Busting for Better Rendering Performance</a> (HTML5Rocks)</li>
+                    <li><a href="http://wilsonpage.co.uk/preventing-layout-thrashing/">Preventing 'layout thrashing'</a> (Wilson Page)</li>
                     <li><a href="http://third-dimension-webgl-threejs.herokuapp.com">The 3rd Dimension with WebGL &amp; Three.js</a></li>
                     <li><a href="http://www.peteroshaughnessy.com/post/60868538533/attempting-fast-3d-graphics-for-mobile-web-without">Attempting fast 3D graphics for mobile web, without WebGL</a> (Three.js, Pixi.js)</li>
                     <!--<li><a href="http://michaelobriena.github.io/blog/2013/09/28/understanding-the-threejs-css3drenderer/">"Understanding the Three.js CSS3DRenderer"</a></li>-->
