@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
 /**
  * Pearson Future Tech theme for reveal.js
  *
  * Based on Sky theme, copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
 .reveal a:not(.image) {
   line-height: 1.3em; }
 
@@ -145,121 +145,133 @@ body {
 
 @-webkit-keyframes slide-in-left1 {
   0% {
-    left: -2000px; }
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px); }
 
   10% {
-    left: 0; }
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
 
   90% {
-    left: 0; }
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
 
   100% {
-    left: -2000px; } }
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px); } }
 
 @keyframes slide-in-left1 {
   0% {
-    left: -2000px; }
+    transform: translateX(-2000px); }
 
   10% {
-    left: 0; }
+    transform: translateX(0); }
 
   90% {
-    left: 0; }
+    transform: translateX(0); }
 
   100% {
-    left: -2000px; } }
+    transform: translateX(-2000px); } }
 
 @-webkit-keyframes slide-in-left2 {
   0% {
-    left: -2000px; }
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px); }
 
   20% {
-    left: 0; }
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
 
   90% {
-    left: 0; }
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
 
   100% {
-    left: -2000px; } }
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px); } }
 
 @keyframes slide-in-left2 {
   0% {
-    left: -2000px; }
+    transform: translateX(-2000px); }
 
   20% {
-    left: 0; }
+    transform: translateX(0); }
 
   90% {
-    left: 0; }
+    transform: translateX(0); }
 
   100% {
-    left: -2000px; } }
+    transform: translateX(-2000px); } }
 
 @-webkit-keyframes slide-in-right {
   0% {
-    left: 2000px; }
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px); }
 
   15% {
-    left: 0; }
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
 
   90% {
-    left: 0; }
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
 
   100% {
-    left: 2000px; } }
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px); } }
 
 @keyframes slide-in-right {
   0% {
-    left: 2000px; }
+    transform: translateX(2000px); }
 
   15% {
-    left: 0; }
+    transform: translateX(0); }
 
   90% {
-    left: 0; }
+    transform: translateX(0); }
 
   100% {
-    left: 2000px; } }
+    transform: translateX(2000px); } }
 
 @-webkit-keyframes slide-out-and-in {
   0% {
-    left: 0; }
+    transform: translateX(0); }
 
   50% {
-    left: -320px; }
+    transform: translateX(-320px); }
 
   95% {
-    left: 0; } }
+    transform: translateX(0); } }
 
 @-moz-keyframes slide-out-and-in {
   0% {
-    left: 0; }
+    transform: translateX(0); }
 
   50% {
-    left: -320px; }
+    transform: translateX(-320px); }
 
   95% {
-    left: 0; } }
+    transform: translateX(0); } }
 
 @-o-keyframes slide-out-and-in {
   0% {
-    left: 0; }
+    transform: translateX(0); }
 
   50% {
-    left: -320px; }
+    transform: translateX(-320px); }
 
   95% {
-    left: 0; } }
+    transform: translateX(0); } }
 
 @keyframes slide-out-and-in {
   0% {
-    left: 0; }
+    transform: translateX(0); }
 
   50% {
-    left: -320px; }
+    transform: translateX(-320px); }
 
   95% {
-    left: 0; } }
+    transform: translateX(0); } }
 
 @-webkit-keyframes spin3d {
   from {
@@ -409,20 +421,21 @@ body {
   top: -50px;
   margin: 0 auto; }
   .reveal #demo-title h1 {
-    position: absolute; }
+    position: absolute;
+    white-space: nowrap; }
     .reveal #demo-title h1.one {
       top: 0;
-      left: -2000px;
+      left: 0;
       -webkit-animation: slide-in-left1 10s ease-in-out infinite;
       animation: slide-in-left1 10s ease-in-out infinite; }
     .reveal #demo-title h1.two {
       top: 1em;
-      left: 2000px;
+      left: 0;
       -webkit-animation: slide-in-right 10s ease-in-out infinite;
       animation: slide-in-right 10s ease-in-out infinite; }
     .reveal #demo-title h1.three {
       top: 2em;
-      left: -2000px;
+      left: 0;
       -webkit-animation: slide-in-left2 10s ease-in-out infinite;
       animation: slide-in-left2 10s ease-in-out infinite; }
 .reveal .motion-example {
