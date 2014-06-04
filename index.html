@@ -127,6 +127,21 @@
                     <h2>2. Canvas</h2>
                 </section>
                 <section>
+                    <pre><code class="html">
+&lt;canvas id="myCanvas">
+    my fallback content
+&lt;/canvas>
+                    </code></pre>
+                    <pre><code class="javascript">
+var canvas = document.getElementById('myCanvas');
+
+var ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'rgb(255, 0, 0)';
+ctx.fillRect( 20, 20, 100, 200 );
+                    </code></pre>
+                </section>
+                <section>
                     <video width="80%" controls>
                         <source src="videos/knoggins2.mp4" type="video/mp4;"/>
                         <!--<source src="videos/knoggins2.webm" type="video/webm;"/>-->
@@ -145,6 +160,22 @@
             <section data-background="#0ac2d2">
                 <section>
                     <h2>3. WebGL</h2>
+                </section>
+                <section>
+                    <pre><code class="html">
+&lt;canvas id="myCanvas">
+my fallback content
+&lt;/canvas>
+                    </code></pre>
+                    <pre><code class="javascript">
+var canvas = document.getElementById('myCanvas');
+
+var gl = canvas.getContext('webgl') ||
+         canvas.getContext('experimental-webgl');
+
+/* Lots of low level code here! Or use a library */
+                    </code></pre>
+                    <p><small>See <a href="bit.ly/third-dimension">bit.ly/third-dimension</a> (desktop)</small></p>
                 </section>
                 <section>
                     <video width="80%" controls>
@@ -195,6 +226,17 @@
                     <h2>4. CSS</h2>
                 </section>
                 <section>
+                    <pre id="demo-cssanimation"><code class="css">
+.demo {
+    transition-property: transform;
+    transition-duration: 2s;
+}
+.demo:hover {
+    transform: rotateX(45deg) scale(1.2);
+}
+                    </code></pre>
+                </section>
+                <section>
                     <video id="react-touch-demo" controls>
                         <source src="videos/react-touch-demo.mp4" type="video/mp4;"/>
                         <!--<source src="videos/react-touch-demo.webm" type="video/webm;"/>-->
@@ -231,21 +273,13 @@
                 </section>
                 <section>
                     <h3>Declaring in CSS generally best for performance</h3>
-                    <pre id="demo-cssanimation"><code class="css">
+                    <pre id="demo-csskeyframes"><code class="css">
 @keyframes spin3d {
     0% { transform: rotateY(0deg); }
     100% { transform: rotateY(360deg); }
 }
-.move-me {
-    animation: spin3d 5s ease-in-out infinite;
-}
-
-.another-one {
-    transition-property: transform;
-    transition-duration: 2s;
-}
-.another-one:hover {
-    transform: rotateX(45deg) scale(1.2)
+.you-spin-me-right-round-baby-right-round:hover {
+    animation: spin3d 3s ease-in-out infinite;
 }
                     </code></pre>
                     <small>NB. Vendor prefixes omitted for simplicity</small>

@@ -421,6 +421,9 @@ body {
 .reveal #demo-cssanimation:hover {
   transform: rotateX(45deg) scale(1.2);
   -webkit-transform: rotateX(45deg) scale(1.2); }
+.reveal #demo-csskeyframes:hover {
+  -webkit-animation: spin3d 3s ease-in-out infinite;
+  animation: spin3d 3s ease-in-out infinite; }
 .reveal #demo-title {
   width: 680px;
   height: 400px;

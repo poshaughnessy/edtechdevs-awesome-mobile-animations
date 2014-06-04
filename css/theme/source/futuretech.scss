@@ -412,6 +412,11 @@ $selectionBackgroundColor: #134674;
     -webkit-transform: rotateX(45deg) scale(1.2);
   }
 
+  #demo-csskeyframes:hover {
+    -webkit-animation: spin3d 3s ease-in-out infinite;
+    animation: spin3d 3s ease-in-out infinite;
+  }
+
   #demo-title {
 
     width: 680px;
