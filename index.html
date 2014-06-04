@@ -286,6 +286,10 @@ var gl = canvas.getContext('webgl') ||
                 </section>
                 <section>
                     <h3>But you often need to control through JavaScript</h3>
+                    <!-- " In order to successfully start a transition, the browser has to acknowledge that the element
+                    is in the starting position. There are a few ways to do this. One of the most common ways is to
+                    read from one of the element properties that forces the browser to compute layout, thereby ensuring
+                    it knows that the element has a starting position before transitioning to the ending position" -->
                     <pre><code class="javascript">
 snowFlake.style.transform = 'translate(' + snowLeft + 'px, -100%)';
 // wait a frame
