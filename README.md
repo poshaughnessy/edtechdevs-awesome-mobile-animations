@@ -7,16 +7,18 @@ The talk is about the fact that we (web developers) should try to up our game an
 It gives examples that use CSS3D, Canvas and WebGL. It lightly touches on some performance tips.
 
 
-## Running locally [recommended!]
+## Running locally
 
 * npm install
 * grunt
 * Visit: http://localhost:8000
 
-## Hosted version [not recommended!]
+## Hosted version
 
-It's up on [Heroku](http://awesome-mobile-animations.herokuapp.com) but it's very doubtful that it will load properly
-for you, because it has a large number of big embedded videos and gifs.
+[awesome-mobile-animations.herokuapp.com](http://awesome-mobile-animations.herokuapp.com).
+
+**Please note: Best in desktop Safari**. Chrome struggles to load everything - I guess because there are
+so many big embedded videos and gifs. It's even the same problem running it locally, though...
 
 ## Thanks
 
