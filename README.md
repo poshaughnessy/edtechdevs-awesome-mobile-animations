@@ -17,8 +17,7 @@ It gives examples that use CSS3D, Canvas and WebGL. It lightly touches on some p
 
 [awesome-mobile-animations.herokuapp.com](http://awesome-mobile-animations.herokuapp.com).
 
-**Please note: Best in desktop Safari**. Chrome struggles to load everything - I guess because there are
-so many big embedded videos and gifs. It's even the same problem running it locally, though...
+Best in Chrome or Safari. Pretty good in Firefox. Untested in Internet Explorer.
 
 ## Thanks
 
