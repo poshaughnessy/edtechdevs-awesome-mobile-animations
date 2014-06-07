@@ -1,9 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
 /**
  * Pearson Future Tech theme for reveal.js
  *
  * Based on Sky theme, copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
 .reveal a:not(.image) {
   line-height: 1.3em; }
 
@@ -164,6 +164,8 @@ body {
 .reveal small,
 .reveal li {
   color: #fff; }
+.reveal p.minor {
+  font-size: 0.7em; }
 .reveal ul {
   margin-top: 1em; }
 .reveal li {
@@ -172,6 +174,10 @@ body {
   width: 100%; }
   .reveal pre code {
     padding: 5px 10px; }
+.reveal .arrow {
+  font-weight: bold;
+  -webkit-transform: scaleX(1.2);
+  transform: scaleX(1.2); }
 .reveal p + small,
 .reveal h2 + small,
 .reveal h3 + small,
@@ -240,7 +246,7 @@ body {
 .reveal .bad-example .banned {
   position: absolute;
   top: 0;
-  left: 165px;
+  left: 130px;
   z-index: 1;
   pointer-events: none; }
 .reveal .more-info {
@@ -449,17 +455,21 @@ body {
       -webkit-animation: slide-in-left2 10s ease-in-out infinite;
       animation: slide-in-left2 10s ease-in-out infinite; }
 .reveal .demo-boring {
-  background: url(/img/iphone-frame-portrait.png) top left no-repeat;
   width: 360px;
-  height: 710px;
+  height: 790px;
   margin: -20px auto 0 auto; }
+  .reveal .demo-boring .iphone-frame {
+    width: 360px;
+    height: 790px;
+    z-index: -1;
+    position: absolute; }
   .reveal .demo-boring .container {
     border: 1px solid #666;
     background-color: #fff;
     width: 319px;
     height: 480px;
     position: relative;
-    top: 115px;
+    top: 95px;
     left: 20px;
     overflow: hidden; }
     .reveal .demo-boring .container .header {
@@ -474,8 +484,9 @@ body {
         width: 32px;
         height: 32px;
         left: 5px;
-        top: 2px;
-        background: url(/img/icon-menu-32.png) top left no-repeat; }
+        top: 2px; }
+      .reveal .demo-boring .container .header .menu-toggle-image:hover {
+        box-shadow: 0 0 0; }
     .reveal .demo-boring .container p {
       color: #333;
       font-size: 0.8em;

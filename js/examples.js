@@ -1,6 +1,11 @@
 (function() {
 
-    fullScreen();
+    var images = [];
+
+    console.log('images', images);
+
+    //fullScreen();
+    //forceEarlyImageLoad();
     reactDemo();
     boringDemo();
 
@@ -34,6 +39,32 @@
         document.getElementById('demo-title').onclick = function() {
             toggleFullScreen();
         }
+
+    }
+
+    function preloadImages(imageSources) {
+
+        for( var i=0; i < imageSources.length; i++ ) {
+
+            var image = new Image();
+
+            image.src = imageSources[i];
+
+            console.log('preload', image.src);
+
+            images.push( image );
+
+        }
+
+    }
+
+    /**
+     * This is to get around a problem whereby the iPhone frame image is not showing up for ages, after all the videos
+     * etc are downloaded.
+     */
+    function forceEarlyImageLoad() {
+
+        preloadImages(['img/iphone-frame-portrait.png']);
 
     }
 

@@ -37,11 +37,11 @@
                     <h1 class="three">Animations</h1>
                 </div>
                 <h4>Peter O'Shaughnessy</h4>
-                <p><small><a href="http://bit.ly/awesome-mobile-animations">bit.ly/awesome-mobile-animations</a></small></p>
+                <p class="minor">Source code: <a href="http://bit.ly/awesome-mobile-animations">bit.ly/awesome-mobile-animations</a></p>
+                <p class="minor">Please view in a modern browser.</p>
             </section>
 
             <section data-background="#364395">
-                <!-- Introducing me - build prototypes, jack of all trades, this is just an area I'm interested in... -->
                 <img width="80%" src="img/Pearson_Without_Strapline_Trans_LoRes.png" alt="Pearson"/>
                 <img width="70%" src="img/ft-h-white-trans.png" alt="Future Tech"/>
             </section>
@@ -60,14 +60,18 @@
             <section data-background="#7bb7fa">
                 <section>
                     <h2>1. Intro (fluid apps)</h2>
+                    <p class="arrow">↓</p>
                 </section>
                 <section class="bad-example">
                     <div class="demo-boring">
+                        <img src="img/iphone-frame-portrait.png" class="iphone-frame"/>
                         <div class="container">
 
-                            <div class="header"><a href="#" class="menu-toggle"></a> <p>Boring App</p></div>
+                            <div class="header"><a href="#" class="menu-toggle"><img src="img/icon-menu-32.png" alt="Menu" class="menu-toggle-image"/></a> <p>Boring App</p></div>
 
                             <p>Press the menu button!</p>
+
+                            <p>Press <span class="arrow">↓</span> when you're ready to continue.</p>
 
                             <div class="menu">
                                 <ul>
@@ -125,6 +129,7 @@
             <section data-background="#0ac2d2">
                 <section>
                     <h2>2. Canvas</h2>
+                    <p class="arrow">↓</p>
                 </section>
                 <section>
                     <pre><code class="html">
@@ -160,6 +165,7 @@ ctx.fillRect( 20, 20, 100, 200 );
             <section data-background="#0ac2d2">
                 <section>
                     <h2>3. WebGL</h2>
+                    <p class="arrow">↓</p>
                 </section>
                 <section>
                     <pre><code class="html">
@@ -224,6 +230,7 @@ var gl = canvas.getContext('webgl') ||
             <section data-background="#0ac2d2">
                 <section>
                     <h2>4. CSS</h2>
+                    <p class="arrow">↓</p>
                 </section>
                 <section>
                     <pre id="demo-cssanimation"><code class="css">
@@ -270,6 +277,7 @@ var gl = canvas.getContext('webgl') ||
             <section data-background="#54e3d0">
                 <section>
                     <h2>5. Web Animations API</h2>
+                    <p class="arrow">↓</p>
                 </section>
                 <section>
                     <h3>Declaring in CSS generally best for performance</h3>
@@ -333,6 +341,7 @@ player.onfinish = function(e) {
             <section data-background="#0ac2d2">
                 <section>
                     <h2>6. General Tips</h2>
+                    <p class="arrow">↓</p>
                 </section>
                 <section>
                     <h3>Tip 1: For 60 FPS, you only have 16ms to prepare each frame</h3>
@@ -397,7 +406,7 @@ player.onfinish = function(e) {
                         <ul>
                             <li>The 4 things a browser can "animate cheaply"</li> <!-- because they don't affect document flow -->
                         </ul>
-                        <iframe width="600px" height="450px" src="//www.youtube.com/embed/-62uPWUxgcg" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="600px" height="450px" src="http://www.youtube.com/embed/-62uPWUxgcg" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </section>
                 <section>
@@ -420,38 +429,9 @@ player.onfinish = function(e) {
                 </section>
             </section>
 
-            <!-- This seems a bit redundant now that WebGL is feasible for mobile? -->
-            <!--
-            <section data-background="#60c7f7">
-                <section>
-                    <h3>Clearly it's possible</h3>
-                    <h3 class="fragment">But it's not always easy...</h3>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/threejs-css3d-100.mp4" type="video/mp4;"/>
-                        <source src="videos/threejs-css3d-100.webm" type="video/webm;"/>
-                    </video>
-                    <p><small>ZamBlocks experiment (Three.js CSS3DRenderer)</small></p>
-                </section>
-                <section>
-                    <video width="80%" controls>
-                        <source src="videos/threejs-canvas-text-optimised.mp4" type="video/mp4;"/>
-                        <source src="videos/threejs-canvas-text-optimised.webm" type="video/webm;"/>
-                    </video>
-                    <p><small>ZamBlocks experiment (Three.js CanvasRenderer)</small></p>
-                </section>
-                <section>
-                    <h3>The story of my struggle...</h3>
-                    <p><a href="http://bit.ly/attempting-fast-3d-graphics">bit.ly/attempting-fast-3d-graphics</a></p>
-                </section>
-            </section>
-            -->
-
             <section data-background="#60c7f7">
                 <section>
                     <h2>&ldquo;Great animations <br>make great apps&rdquo;</h2>
-                    <!--<small><a href="http://www.raizlabs.com/2012/09/great-animations-great-apps/">www.raizlabs.com/2012/09/great-animations-great-apps/</a></small>-->
                 </section>
                 <section class="bad-example">
                     <h4>So ditch the boring animations.</h4>
@@ -461,17 +441,6 @@ player.onfinish = function(e) {
                     <h3>And make it fluid.</h3>
                     <h3 class="fragment">Make it <em>awesome</em>.</h3>
                 </section>
-                <!--
-                <section>
-                    <h4>So remember...</h4>
-
-                    <img src="img/nocrouchrobot.png" alt="No Peter Crouch robot" width="450"/>
-
-                    <p><small><a href="http://blogs.infobae.com/like/2013/08/14/los-10-futbolistas-mas-altos-del-mundo/">blogs.infobae.com</a></small></p>
-
-                    <h3><span class="fragment">Don't be rigid.</span> <span class="fragment">Be fluid.</span></h3>
-                </section>
-                -->
             </section>
 
             <section data-background="#0ac2d2">
@@ -490,13 +459,11 @@ player.onfinish = function(e) {
                     <li><a href="http://capptivate.co/category/patterns/transitions/">Capptivate.co UI transition patterns</a></li>
                     <li><a href="http://www.ui-transitions.com/#motion">Disney Animation Principles</a></li>
                     <li><a href="https://vimeo.com/79659941">React touch demo video</a> includes further advice in comments</li>
-                    <!--<li><a href="http://www.html5rocks.com/en/tutorials/speed/animations/">"Leaner, Meaner, Faster Animations with requestAnimationFrame"</a> (HTML5Rocks)</li>-->
                     <li><a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">High Performance Animations</a> (HTML5Rocks)</li>
                     <li><a href="http://www.html5rocks.com/en/tutorials/speed/rendering/">Jank Busting for Better Rendering Performance</a> (HTML5Rocks)</li>
                     <li><a href="http://wilsonpage.co.uk/preventing-layout-thrashing/">Preventing 'layout thrashing'</a> (Wilson Page)</li>
                     <li><a href="http://third-dimension-webgl-threejs.herokuapp.com">The 3rd Dimension with WebGL &amp; Three.js</a></li>
                     <li><a href="http://www.peteroshaughnessy.com/post/60868538533/attempting-fast-3d-graphics-for-mobile-web-without">Attempting fast 3D graphics for mobile web, without WebGL</a> (Three.js, Pixi.js)</li>
-                    <!--<li><a href="http://michaelobriena.github.io/blog/2013/09/28/understanding-the-threejs-css3drenderer/">"Understanding the Three.js CSS3DRenderer"</a></li>-->
                 </ul>
             </section>
 

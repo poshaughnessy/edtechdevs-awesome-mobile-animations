@@ -81,6 +81,10 @@ $selectionBackgroundColor: #134674;
     color: #fff;
   }
 
+  p.minor {
+    font-size: 0.7em;
+  }
+
   ul {
     margin-top: 1em;
   }
@@ -94,6 +98,12 @@ $selectionBackgroundColor: #134674;
     code {
       padding: 5px 10px;
     }
+  }
+
+  .arrow {
+    font-weight: bold;
+    -webkit-transform: scaleX(1.2);
+    transform: scaleX(1.2);
   }
 
   p + small,
@@ -208,7 +218,7 @@ $selectionBackgroundColor: #134674;
   .bad-example .banned {
     position: absolute;
     top: 0;
-    left: 165px;
+    left: 130px;
     z-index: 1;
     pointer-events: none;
   }
@@ -455,10 +465,16 @@ $selectionBackgroundColor: #134674;
 
   .demo-boring {
 
-    background: url(/img/iphone-frame-portrait.png) top left no-repeat;
     width: 360px;
-    height: 710px;
+    height: 790px;
     margin: -20px auto 0 auto;
+
+    .iphone-frame {
+      width: 360px;
+      height: 790px;
+      z-index: -1;
+      position: absolute;
+    }
 
     .container {
       border: 1px solid #666;
@@ -466,7 +482,7 @@ $selectionBackgroundColor: #134674;
       width: 319px;
       height: 480px;
       position: relative;
-      top: 115px;
+      top: 95px;
       left: 20px;
       overflow: hidden;
 
@@ -487,7 +503,12 @@ $selectionBackgroundColor: #134674;
           height: 32px;
           left: 5px;
           top: 2px;
-          background: url(/img/icon-menu-32.png) top left no-repeat;
+        }
+
+        .menu-toggle-image {
+            &:hover {
+              box-shadow: 0 0 0;
+            }
         }
       }
 
