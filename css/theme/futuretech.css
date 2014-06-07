@@ -212,6 +212,10 @@ body {
     max-height: 70%; }
   .reveal section img.smaller {
     max-height: 55%; }
+  .reveal section img:hover {
+    background: none;
+    box-shadow: 0 0 0;
+    border: 0; }
 .reveal img,
 .reveal video,
 .reveal iframe {
@@ -1421,8 +1425,6 @@ body {
         height: 32px;
         left: 5px;
         top: 2px; }
-      .reveal .demo-boring .container .header .menu-toggle-image:hover {
-        box-shadow: 0 0 0; }
     .reveal .demo-boring .container p {
       color: #333;
       font-size: 0.8em;

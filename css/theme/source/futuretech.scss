@@ -151,6 +151,12 @@ $selectionBackgroundColor: #134674;
     &.smaller {
       max-height: 55%;
     }
+
+    &:hover {
+      background: none;
+      box-shadow: 0 0 0;
+      border: 0;
+    }
   }
 
   img,
@@ -839,12 +845,6 @@ $selectionBackgroundColor: #134674;
           height: 32px;
           left: 5px;
           top: 2px;
-        }
-
-        .menu-toggle-image {
-            &:hover {
-              box-shadow: 0 0 0;
-            }
         }
       }
 
