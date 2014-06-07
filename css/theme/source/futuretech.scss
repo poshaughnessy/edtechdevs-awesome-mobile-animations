@@ -1,5 +1,5 @@
 /**
- * Pearson Future Tech theme for reveal.js
+ * Theme for reveal.js
  *
  * Based on Sky theme, copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
@@ -11,11 +11,20 @@
 // ---------------------------------------------
 
 
-
 // Include theme-specific fonts
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
-//@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
+/**
+ * Thanks to Stefan Wienert:
+ * http://www.stefanwienert.de/blog/2012/05/18/easy-css-vendor-prefix-mixin-for-sass/
+ */
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'arial', 'helvetica', sans-serif;
@@ -102,8 +111,7 @@ $selectionBackgroundColor: #134674;
 
   .arrow {
     font-weight: bold;
-    -webkit-transform: scaleX(1.2);
-    transform: scaleX(1.2);
+    @include vendor-prefix(transform, scaleX(1.2));
   }
 
   p + small,
@@ -232,178 +240,513 @@ $selectionBackgroundColor: #134674;
 // Animations
 
 // Slide in left 1
+
 @-webkit-keyframes slide-in-left1 {
   0% {
-    -webkit-transform: translateX(-2000px);
-    transform: translateX(-2000px);
+    @include vendor-prefix(transform, translateX(-2000px));
   }
   10% {
-    -webkit-transform: translateX(9px);
-    transform: translateX(9px);
+    @include vendor-prefix(transform, translateX(9px));
   }
   11% {
-    -webkit-transform: translateX(-1px);
-    transform: translateX(-1px);
+    @include vendor-prefix(transform, translateX(-1px));
   }
   12% {
-    -webkit-transform: translateX(2px);
-    transform: translateX(2px);
+    @include vendor-prefix(transform, translateX(2px));
   }
   13% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    @include vendor-prefix(transform, translateX(0));
   }
   90% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    @include vendor-prefix(transform, translateX(0));
   }
   92% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    @include vendor-prefix(transform, translateX(50px));
   }
   100% {
-    -webkit-transform: translateX(-2000px);
-    transform: translateX(-2000px);
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+}
+@-ms-keyframes slide-in-left1 {
+  0% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+  10% {
+    @include vendor-prefix(transform, translateX(9px));
+  }
+  11% {
+    @include vendor-prefix(transform, translateX(-1px));
+  }
+  12% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  13% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  92% {
+    @include vendor-prefix(transform, translateX(50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+}
+@-moz-keyframes slide-in-left1 {
+  0% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+  10% {
+    @include vendor-prefix(transform, translateX(9px));
+  }
+  11% {
+    @include vendor-prefix(transform, translateX(-1px));
+  }
+  12% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  13% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  92% {
+    @include vendor-prefix(transform, translateX(50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+}
+@-o-keyframes slide-in-left1 {
+  0% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+  10% {
+    @include vendor-prefix(transform, translateX(9px));
+  }
+  11% {
+    @include vendor-prefix(transform, translateX(-1px));
+  }
+  12% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  13% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  92% {
+    @include vendor-prefix(transform, translateX(50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+}
+@keyframes slide-in-left1 {
+  0% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+  10% {
+    @include vendor-prefix(transform, translateX(9px));
+  }
+  11% {
+    @include vendor-prefix(transform, translateX(-1px));
+  }
+  12% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  13% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  92% {
+    @include vendor-prefix(transform, translateX(50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(-2000px));
   }
 }
 
 // Slide in left 2
 @-webkit-keyframes slide-in-left2 {
   0% {
-    -webkit-transform: translateX(-2000px);
-    transform: translateX(-2000px);
+    @include vendor-prefix(transform, translateX(-2000px));
   }
   15% {
-    -webkit-transform: translateX(8px);
-    transform: translateX(8px);
+    @include vendor-prefix(transform, translateX(8px));
   }
   16% {
-    -webkit-transform: translateX(-1px);
-    transform: translateX(-1px);
+    @include vendor-prefix(transform, translateX(-1px));
   }
   17% {
-    -webkit-transform: translateX(2px);
-    transform: translateX(2px);
+    @include vendor-prefix(transform, translateX(2px));
   }
   18% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    @include vendor-prefix(transform, translateX(0));
   }
   90% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    @include vendor-prefix(transform, translateX(0));
   }
   96% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    @include vendor-prefix(transform, translateX(50px));
   }
   100% {
-    -webkit-transform: translateX(-2000px);
-    transform: translateX(-2000px);
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+}
+@-ms-keyframes slide-in-left2 {
+  0% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+  15% {
+    @include vendor-prefix(transform, translateX(8px));
+  }
+  16% {
+    @include vendor-prefix(transform, translateX(-1px));
+  }
+  17% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  18% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  96% {
+    @include vendor-prefix(transform, translateX(50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+}
+@-moz-keyframes slide-in-left2 {
+  0% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+  15% {
+    @include vendor-prefix(transform, translateX(8px));
+  }
+  16% {
+    @include vendor-prefix(transform, translateX(-1px));
+  }
+  17% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  18% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  96% {
+    @include vendor-prefix(transform, translateX(50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+}
+@-o-keyframes slide-in-left2 {
+  0% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+  15% {
+    @include vendor-prefix(transform, translateX(8px));
+  }
+  16% {
+    @include vendor-prefix(transform, translateX(-1px));
+  }
+  17% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  18% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  96% {
+    @include vendor-prefix(transform, translateX(50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+}
+@keyframes slide-in-left2 {
+  0% {
+    @include vendor-prefix(transform, translateX(-2000px));
+  }
+  15% {
+    @include vendor-prefix(transform, translateX(8px));
+  }
+  16% {
+    @include vendor-prefix(transform, translateX(-1px));
+  }
+  17% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  18% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  96% {
+    @include vendor-prefix(transform, translateX(50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(-2000px));
   }
 }
 
 // Slide in right
 @-webkit-keyframes slide-in-right {
   0% {
-    -webkit-transform: translateX(2000px);
-    transform: translateX(2000px);
+    @include vendor-prefix(transform, translateX(2000px));
   }
   10% {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
+    @include vendor-prefix(transform, translateX(-10px));
   }
   11% {
-    -webkit-transform: translateX(2px);
-    transform: translateX(2px);
+    @include vendor-prefix(transform, translateX(2px));
   }
   12% {
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px);
+    @include vendor-prefix(transform, translateX(-3px));
   }
   13% {
-    -webkit-transform: translateX(1px);
-    transform: translateX(1px);
+    @include vendor-prefix(transform, translateX(1px));
   }
   14% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    @include vendor-prefix(transform, translateX(0));
   }
   90% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    @include vendor-prefix(transform, translateX(0));
   }
   94% {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
+    @include vendor-prefix(transform, translateX(-50px));
   }
   100% {
-    -webkit-transform: translateX(2000px);
-    transform: translateX(2000px);
+    @include vendor-prefix(transform, translateX(2000px));
   }
 }
-
-// Slide out and in. NB. Purposefully using 'left' instead of 'translate' to demonstrate point.
-@-webkit-keyframes slide-out-and-in {
-  0%   { left: 0px; }
-  50% { left: -320px; }
-  95% { left: 0px; }
+@-ms-keyframes slide-in-right {
+  0% {
+    @include vendor-prefix(transform, translateX(2000px));
+  }
+  10% {
+    @include vendor-prefix(transform, translateX(-10px));
+  }
+  11% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  12% {
+    @include vendor-prefix(transform, translateX(-3px));
+  }
+  13% {
+    @include vendor-prefix(transform, translateX(1px));
+  }
+  14% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  94% {
+    @include vendor-prefix(transform, translateX(-50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(2000px));
+  }
 }
-@keyframes slide-out-and-in {
-  0%   { left: 0; }
-  50% { left: -320px; }
-  95% { left: 0; }
+@-moz-keyframes slide-in-right {
+  0% {
+    @include vendor-prefix(transform, translateX(2000px));
+  }
+  10% {
+    @include vendor-prefix(transform, translateX(-10px));
+  }
+  11% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  12% {
+    @include vendor-prefix(transform, translateX(-3px));
+  }
+  13% {
+    @include vendor-prefix(transform, translateX(1px));
+  }
+  14% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  94% {
+    @include vendor-prefix(transform, translateX(-50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(2000px));
+  }
+}
+@-o-keyframes slide-in-right {
+  0% {
+    @include vendor-prefix(transform, translateX(2000px));
+  }
+  10% {
+    @include vendor-prefix(transform, translateX(-10px));
+  }
+  11% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  12% {
+    @include vendor-prefix(transform, translateX(-3px));
+  }
+  13% {
+    @include vendor-prefix(transform, translateX(1px));
+  }
+  14% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  94% {
+    @include vendor-prefix(transform, translateX(-50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(2000px));
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    @include vendor-prefix(transform, translateX(2000px));
+  }
+  10% {
+    @include vendor-prefix(transform, translateX(-10px));
+  }
+  11% {
+    @include vendor-prefix(transform, translateX(2px));
+  }
+  12% {
+    @include vendor-prefix(transform, translateX(-3px));
+  }
+  13% {
+    @include vendor-prefix(transform, translateX(1px));
+  }
+  14% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  90% {
+    @include vendor-prefix(transform, translateX(0));
+  }
+  94% {
+    @include vendor-prefix(transform, translateX(-50px));
+  }
+  100% {
+    @include vendor-prefix(transform, translateX(2000px));
+  }
 }
 
 // Spin 3D
 @-webkit-keyframes spin3d {
   from {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
+    @include vendor-prefix(transform, rotateY(0deg));
   }
   to {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
+    @include vendor-prefix(transform, rotateY(360deg));
+  }
+}
+@-ms-keyframes spin3d {
+  from {
+    @include vendor-prefix(transform, rotateY(0deg));
+  }
+  to {
+    @include vendor-prefix(transform, rotateY(360deg));
+  }
+}
+@-moz-keyframes spin3d {
+  from {
+    @include vendor-prefix(transform, rotateY(0deg));
+  }
+  to {
+    @include vendor-prefix(transform, rotateY(360deg));
+  }
+}
+@-o-keyframes spin3d {
+  from {
+    @include vendor-prefix(transform, rotateY(0deg));
+  }
+  to {
+    @include vendor-prefix(transform, rotateY(360deg));
   }
 }
 @keyframes spin3d {
   from {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
+    @include vendor-prefix(transform, rotateY(0deg));
   }
   to {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
+    @include vendor-prefix(transform, rotateY(360deg));
   }
 }
 
 // Bounce n Squish
 @-webkit-keyframes bounce-squish {
   0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
+    @include vendor-prefix(transform, scaleY(1));
   }
   50% {
-    -webkit-transform: scaleY(1.3) scaleX(1.3);
-    transform: scaleY(1.3) scaleX(1.3);
+    @include vendor-prefix(transform, scaleY(1.3) scaleX(1.3));
   }
   100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
+    @include vendor-prefix(transform, scaleY(1));
+  }
+}
+@-ms-keyframes bounce-squish {
+  0% {
+    @include vendor-prefix(transform, scaleY(1));
+  }
+  50% {
+    @include vendor-prefix(transform, scaleY(1.3) scaleX(1.3));
+  }
+  100% {
+    @include vendor-prefix(transform, scaleY(1));
+  }
+}
+@-moz-keyframes bounce-squish {
+  0% {
+    @include vendor-prefix(transform, scaleY(1));
+  }
+  50% {
+    @include vendor-prefix(transform, scaleY(1.3) scaleX(1.3));
+  }
+  100% {
+    @include vendor-prefix(transform, scaleY(1));
+  }
+}
+@-o-keyframes bounce-squish {
+  0% {
+    @include vendor-prefix(transform, scaleY(1));
+  }
+  50% {
+    @include vendor-prefix(transform, scaleY(1.3) scaleX(1.3));
+  }
+  100% {
+    @include vendor-prefix(transform, scaleY(1));
   }
 }
 @keyframes bounce-squish {
   0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
+    @include vendor-prefix(transform, scaleY(1));
   }
   50% {
-    -webkit-transform: scaleY(1.3) scaleX(1.3);
-    transform: scaleY(1.3) scaleX(1.3);
+    @include vendor-prefix(transform, scaleY(1.3) scaleX(1.3));
   }
   100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
+    @include vendor-prefix(transform, scaleY(1));
   }
 }
 
@@ -412,19 +755,15 @@ $selectionBackgroundColor: #134674;
   // Embedded examples
 
   #demo-cssanimation {
-    transition-property: transform;
-    -webkit-transition-property: transform;
-    transition-duration: 2s;
-    -webkit-transition-duration: 2s;
+    @include vendor-prefix(transition-property, transform);
+    @include vendor-prefix(transition-duration, 2s);
   }
   #demo-cssanimation:hover {
-    transform: rotateX(45deg) scale(1.2);
-    -webkit-transform: rotateX(45deg) scale(1.2);
+    @include vendor-prefix(transform, rotateX(45deg) scale(1.2));
   }
 
   #demo-csskeyframes:hover {
-    -webkit-animation: spin3d 3s ease-in-out infinite;
-    animation: spin3d 3s ease-in-out infinite;
+    @include vendor-prefix(animation, spin3d 3s ease-in-out infinite);
   }
 
   #demo-title {
@@ -442,22 +781,19 @@ $selectionBackgroundColor: #134674;
       &.one {
         top: 0;
         left: 0;
-        -webkit-animation: slide-in-left1 10s ease-in-out infinite;
-        animation:         slide-in-left1 10s ease-in-out infinite;
+        @include vendor-prefix(animation, slide-in-left1 10s ease-in-out infinite);
       }
 
       &.two {
         top: 1em;
         left: 0;
-        -webkit-animation: slide-in-right 10s ease-in-out infinite;
-        animation:         slide-in-right 10s ease-in-out infinite;
+        @include vendor-prefix(animation, slide-in-right 10s ease-in-out infinite);
       }
 
       &.three {
         top: 2em;
         left: 0;
-        -webkit-animation: slide-in-left2 10s ease-in-out infinite;
-        animation:         slide-in-left2 10s ease-in-out infinite;
+        @include vendor-prefix(animation, slide-in-left2 10s ease-in-out infinite);
       }
     }
 
@@ -528,18 +864,12 @@ $selectionBackgroundColor: #134674;
       left: -320px;
       top: 40px;
 
-      /* NB. Deliberately using left rather than translate to make a point */
-      transition: left 0.5s linear;
-      -webkit-transition: left 0.5s linear;
+      /* NB. Deliberately using left rather than translate to make a point about bad animations */
+      @include vendor-prefix(transition, left 0.5s linear);
 
       &.reveal {
         left: 0;
       }
-      /*
-      -webkit-animation: slide-out-and-in 1.5s linear infinite;
-      animation:         slide-out-and-in 1.5s linear infinite;
-      */
-
 
       ul {
         font-size: 0.8em;
@@ -557,19 +887,6 @@ $selectionBackgroundColor: #134674;
     position: relative;
     margin: 0 auto;
 
-    /*
-    position: relative;
-    top: -100px;
-
-    h1 {
-      -webkit-perspective: 300;
-      -webkit-transform-style: preserve-3d;
-      -webkit-transition: -webkit-transform 1s;
-      -webkit-animation: bounce-squish 3s ease-in-out infinite;
-      animation:         bounce-squish 3s ease-in-out infinite;
-    }
-    */
-
     h1, h2 {
       position: absolute;
       white-space: nowrap;
@@ -577,22 +894,19 @@ $selectionBackgroundColor: #134674;
       &.one {
         top: 0;
         left: 0;
-        -webkit-animation: slide-in-left1 10s ease-in-out infinite;
-        animation:         slide-in-left1 10s ease-in-out infinite;
+        @include vendor-prefix(animation, slide-in-left1 10s ease-in-out infinite);
       }
 
       &.two {
         top: 2.5em;
         left: 0;
-        -webkit-animation: slide-in-right 10s ease-in-out infinite;
-        animation:         slide-in-right 10s ease-in-out infinite;
+        @include vendor-prefix(animation, slide-in-right 10s ease-in-out infinite);
       }
 
       &.three {
         top: 4em;
         left: 0;
-        -webkit-animation: slide-in-left2 10s ease-in-out infinite;
-        animation:         slide-in-left2 10s ease-in-out infinite;
+        @include vendor-prefix(animation, slide-in-left2 10s ease-in-out infinite);
       }
 
     }
